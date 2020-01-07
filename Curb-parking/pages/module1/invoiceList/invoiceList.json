@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100
+}

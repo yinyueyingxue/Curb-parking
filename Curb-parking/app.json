@@ -1,0 +1,100 @@
+{
+  "pages": [
+    "pages/module2/homepage/homepage",
+    "pages/module2/home-page/home-page",
+    "pages/module2/home-page/nearby",
+    "pages/navbar/index",
+    "pages/module1/invoice/invoice",
+    "pages/module1/invoiceList/invoiceList",
+    "pages/module1/invoiceDetails/invoiceDetails",
+    "pages/module1/parkingTicket/parkingTicket",
+    "pages/module1/invoiceSucceed/invoiceSucceed",
+    "pages/module1/moreContent/moreContent",
+    "pages/module1/invoiceHistory/invoiceHistory",
+    "pages/module1/invoiceHelp/invoiceHelp",
+    "pages/module1/order-noneed/order-noneed",
+    "pages/module1/paylist/paylist",
+    "pages/module1/order/order",
+    "pages/module1/invoice-success/invoice-success",
+    "pages/module1/finishorder/finishorder",
+    "pages/module1/parkrecord/parkrecord",
+    "pages/module1/parkrecordDetails/parkrecordDetails",
+    "pages/module1/index/index",
+    "pages/module1/order-success/order-success",
+    "pages/module2/home-page/search",
+    "pages/module2/home-page/details",
+    "pages/module2/longRentCar/longRentCar",
+    "pages/module2/longRentCarDetails/longRentCarDetails",
+    "pages/module2/promptlyRenew/promptlyRenew",
+    "pages/module2/walletTopUp/walletTopUp",
+    "pages/module2/setPassword/setPassword",
+    "pages/module2/changePassword/changePassword",
+    "pages/module2/resetPasswords/resetPasswords",
+    "pages/module2/newPassword/newPassword",
+    "pages/module2/topUp/topUp",
+    "pages/module3/services/services",
+    "pages/module3/services/stopPay",
+    "pages/module3/stopPayList/stopPayList",
+    "pages/module3/gift/gift",
+    "pages/module3/my-car/my-car", 
+    "pages/module3/feedback/feedback",
+    "pages/module3/monthly-card/two",
+    "pages/module3/monthly-card/one", 
+    "pages/module3/my/my",
+    "pages/module3/new-car/new-car",
+    "pages/module4/register/register",
+    "pages/module3/my/cmbpage",
+    "pages/module3/services/payCost/confirmOrder",
+    "pages/module3/services/payCost/paySuccess",
+    "pages/module3/services/payCost/payError"
+    
+  ],
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "onReachBottomDistance": 50
+   
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#407EC2",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "iconPath": "images/home-n.png",
+        "selectedIconPath": "images/home-s.png",
+        "pagePath": "pages/module2/homepage/homepage",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/homepage-n.png",
+        "selectedIconPath": "images/homepage-s.png",
+        "pagePath": "pages/module2/home-page/home-page",
+        "text": "车场信息"
+      },
+      {
+        "iconPath": "images/service-n.png",
+        "selectedIconPath": "images/service-s.png",
+        "pagePath": "pages/module3/services/services",
+        "text": "服务"
+      },
+      {
+        "iconPath": "images/my-n.png",
+        "selectedIconPath": "images/my-s.png",
+        "pagePath": "pages/module3/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

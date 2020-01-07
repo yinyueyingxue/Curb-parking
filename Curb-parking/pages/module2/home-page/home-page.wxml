@@ -1,0 +1,74 @@
+<!--pages/home-page/home-page.wxml-->
+<view class='view-page'>
+  <navbar page-name="算停车" ></navbar>
+</view>
+<!-- <view class="lineView" style="margin-top:128rpx; position:fixed;"></view> -->
+<view bindtap="seeMap">{{adrr}}</view>
+<map id='map'
+ show-location 
+ longitude='{{lng}}' 
+ latitude='{{lat}}' 
+ scale='{{scale}}'  
+ markers='{{markers}}' 
+ bindmarkertap='tapMarker' 
+ bindregionchange="mapchangeTap"
+ data-id="{{markers}}" 
+>
+<!-- 设置地图标记点 -->
+ <cover-image class='img-map' src='../../../images/my_marker.png'></cover-image>
+ <cover-view class="index_bt1"></cover-view>
+  <cover-image class='search' style="margin-top:{{navT - 10}}px" src='../../../images/sousuokuang.png' bindtap='toLocation'></cover-image>
+  <cover-image class="spare" style="margin-top:{{navT + 45}}px" src="../../../images/spare.png"></cover-image>
+  <cover-image class='location' src='../../../images/map-location.png' bindtap='backLocation'></cover-image>
+  <cover-view class='number blueColor' bindtap="numberViewClick">
+    <cover-view class='number-top'>
+      <cover-image class='number-image' src='../../../images/payrecord.png'></cover-image>
+      <cover-view class='num-title'>未缴费记录</cover-view>
+      <cover-view class='num-num'>{{allParkCount.length}}</cover-view>
+    </cover-view>
+  </cover-view>
+    <!--mask-->
+    <cover-view class="drawer_screen" bindtap="hideModal" data-statu="close" wx:if="{{showModalStatus}}"></cover-view>
+    <!--content-->
+    <!--使用animation属性指定需要执行的动画-->
+    <cover-view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+      <!--drawer content-->
+      <cover-view class="drawer_content">
+        <cover-view class='drawer_top' bindtap='toDetails'>
+          <cover-view class='bottom-left'>
+            <cover-view class='text-left one'>{{pkName}}</cover-view>
+            <cover-view class='text-left two'>{{distance==null ? "" : distance}}km | {{address==null ? "" : address}}</cover-view>
+            <cover-view class='text-left three'>余位:{{carBitNum-carBitNumLeft==null ? "0" : carBitNum-carBitNumLeft}}/总车位:{{carBitNum==null ? "0" : carBitNum}}</cover-view>
+            <cover-view style='display:none'>{{feeremark==null ? "" : feeremark}}</cover-view>
+          </cover-view>
+          <cover-view class='bottom-right'>
+            <cover-image class='text-right' 
+            src='../../../images/zhizhen.png' 
+            bindtap='navigation' 
+            data-lat='{{pointLat}}' 
+            data-lng='{{pointLng}}' 
+            data-name='{{pointName}}' 
+            data-address='{{pointAddress}}'></cover-image>
+          </cover-view>
+        </cover-view>
+        <cover-view class='drawer_bottom'>
+          <cover-view class='detail' bindtap='toNearby'>点击查看附近车场</cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  <!-- <cover-view class='footer' style="height:{{tabBarH}}" hidden="{{showModalStatus}}">
+    <cover-view class="lineView"></cover-view>
+    <cover-view class='footer-left' bindtap='toHome'>
+      <cover-image class='footer-image' src='../../../images/homepage-s.png'></cover-image>
+      <cover-view class='footer-text blueTextColor'>首页</cover-view>
+    </cover-view>
+    <cover-view class='footer-middle' bindtap='toServices'>
+      <cover-image class='footer-image' src='../../../images/service-n.png'></cover-image>
+      <cover-view class='footer-text drayTextColor'>服务</cover-view>
+    </cover-view>
+    <cover-view class='footer-right' bindtap='toMy'>
+      <cover-image class='footer-image' src='../../../images/my-n.png'></cover-image>
+      <cover-view class='footer-text drayTextColor'>我的</cover-view>
+    </cover-view>
+  </cover-view> -->
+</map>

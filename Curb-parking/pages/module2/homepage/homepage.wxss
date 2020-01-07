@@ -1,0 +1,147 @@
+/* pages/module2/homepage/homepage.wxss */
+.navbarView {
+  background: white;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  top: 0PX;
+  left: 0;
+  z-index: 10;
+  flex-shrink: 0;
+  display: flex;
+  /* position: fixed; */
+}
+
+.navTitleView {
+  /* background: yellow; */
+  margin-left: 15px;
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  position: fixed;
+  text-align: center;
+}
+
+.backView {
+  /* background: red; */
+  width: 100vw;
+  /* height: 400rpx; */
+}
+
+.swiper {
+  overflow: hidden;
+  width: 93vw;
+  height: 232rpx;
+}
+
+.slide-image {
+  /* background: yellow; */
+  width: 100vw;
+  height: 100%;
+  
+}
+
+.butView {
+  /* background: cyan; */
+  width: 100vw;
+  height: 190rpx;
+  display: flex;
+  align-items: center;
+}
+
+.butView-one {
+  /* background: chartreuse; */
+  width: 33.33%;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.butView-oneView {
+  /* background: yellow; */
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.butView-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.butView-text {
+  margin-top: 16rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleView {
+  width: 100vw;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+}
+
+.homeView {
+  width: 85vw;
+  margin: 0rpx 56rpx 0rpx 56rpx;
+}
+
+.listView {
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  /* background: cyan; */
+}
+
+.listView-left {
+  /* background: cyan; */
+  width: 80%;
+  height: 100%;
+}
+
+.listView-leftTop {
+  margin-top: 32rpx;
+}
+
+.listView-leftCenter {
+  margin-top: 6rpx;
+  display: flex;
+  align-items: center;
+}
+
+.listView-leftCenter-view {
+  width: 2rpx;
+  height: 28rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  background: #f5f5f5
+}
+
+.listView-leftBot {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.listView-right {
+  /* background: chartreuse; */
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  background: #f5f5f5;
+  height: 2rpx;
+  width: 95vw;
+  margin-left: -20rpx;
+}

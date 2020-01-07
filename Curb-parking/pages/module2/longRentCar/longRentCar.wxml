@@ -1,0 +1,59 @@
+<!--pages/module2/longRentCar/longRentCar.wxml-->
+<view class='view-page'>
+  <navbar page-name="长租车位"></navbar>
+</view>
+<!-- <view style="margin-top:{{navH}}px" hidden="{{carList.length == 0 ? false : true}}">
+  <image style="width:93vw; height:232rpx; margin-left:24rpx; margin-rigth:24rpx; margin-top:20rpx;" src="../../../images/carimage.png"></image>
+  <view class="blackTextColor fontSize32" style="width:93vw; margin-left:24rpx; margin-rigth:24rpx; margin-top:40rpx;">Q：什么是长租车位？</view>
+  <view class="drayText6 fontSize24" style="width:93vw; margin-left:24rpx; margin-rigth:24rpx; margin-top:20rpx;">A：进出车场无需点击付款，无感进出，便捷生活。</view>
+  <view class="blackTextColor fontSize32" style="width:93vw; margin-left:24rpx; margin-rigth:24rpx; margin-top:40rpx;">Q：如何开通长租车位？</view>
+  <view class="drayText6 fontSize24" style="width:93vw; margin-left:24rpx; margin-rigth:24rpx; margin-top:20rpx;">A：您需要前往停车场开通车位，伺候便可以在手机自助续费。</view>
+</view> -->
+
+<view class="page" style="margin-top:{{navH}}px" hidden="{{carList.length == 0 ? true : false}}">
+  <view class="backView" wx:for="{{carList}}" wx:key="{{item}}">
+    <view class="carListView blueColor" bindtap="carListViewClick" data-id="{{item.id}}">
+      <view class="carListView-view">
+        <view class="carListView-top">
+          <text class="whiteTextColor fontSize40">{{item.pkname}}</text>
+          <view class="rightView">
+            <image style="width:100%; height:100%;" hidden="{{item.status == 1 ? true : false}}" src="../../../images/stale-s.png"></image>
+          </view>
+        </view>
+        
+        <!-- <image class="rightViewImage"> -->
+        
+        <!-- </image> -->
+        <view class="carListView-center">
+          <text class="whiteTextColor fontSize24">{{item.chargingRule}}元/{{item.typeName}}</text>
+          <view style="height:34rpx; width:2rpx; background:#F5F5F5; margin-left:40rpx; margin-right:40rpx;"></view>
+          <text class="whiteTextColor fontSize24">已绑定{{item.cycle}}辆车</text>
+        </view>
+        <view class="carListView-bottom">
+          <view class="carListView-bottom-view">
+            <view class="carListView-bottom-viewT">
+              <text class="whiteTextColor fontSize48">{{item.remainDays}}</text>
+            </view>
+            <view class="carListView-bottom-viewB">
+              <text class="whiteTextColor fontSize24">剩余天数</text>
+            </view>
+          </view>
+          <view class="carListView-bottom-view">
+            <view class="carListView-bottom-viewT">
+              <text class="whiteTextColor fontSize48">{{item.parkLotNum}}</text>
+            </view>
+            <view class="carListView-bottom-viewB">
+              <text class="whiteTextColor fontSize24">已租车位</text>
+            </view>
+          </view>
+          <view class="goPayView">
+            <text class="blueTextColor fontSize28">去续费</text>
+          </view>
+          <!-- <view class="detailsView" bindtap="carListViewClick">
+            <text class="whiteTextColor fontSize28">查看详情  ></text>
+          </view> -->
+        </view>
+      </view> 
+    </view>
+  </view>
+</view>

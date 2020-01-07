@@ -1,0 +1,74 @@
+/* pages/module1/invoiceHistory/invoiceHistory.wxss */
+page {
+  background-color: rgba(249,249,249,1);
+}
+
+.backView {
+  background-color: rgba(249,249,249,1);
+}
+
+.view-scroll {
+  padding-bottom: 20rpx;
+}
+
+.listView {
+  background: white;
+  width: 92%;
+  height: 200rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 2rpx 4rpx 0rpx rgba(0, 0, 0, .13);
+  display: inline-block;
+}
+
+.listView-top {
+  /* background: green; */
+  width: 92%;
+  height: 35rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listView-topLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listView-topLeft-image {
+  margin-right: 20rpx;
+  width: 14rpx;
+  height: 14rpx;
+}
+
+.listView-topRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listView-centent {
+  /* background: yellow; */
+  width: 92%;
+  height: 30rpx;
+  margin-left: 30rpx;
+  margin-top: 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listView-bottom {
+  /* background: blue; */
+  width: 92%;
+  height: 35rpx;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

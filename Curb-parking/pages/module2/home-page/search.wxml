@@ -1,0 +1,48 @@
+<!--pages/home-page/search.wxml-->
+<view class='view-page'>
+  <navbar page-name="附近停车场"></navbar>
+</view>
+<view class='coat' style="margin-top:{{navH}}px">
+  <view class="top">
+    <input class='search' placeholder='搜索停车场' placeholder-class='font' confirm-type='search' value="{{backfill}}" bindinput="getsuggest"></input>
+    <image class='lookfor' src='../../../images/search.png' data-lat='{{lat}}' data-lng='{{lng}}'></image>
+  </view>
+  <view wx:for="{{suggestion}}" wx:key="index" class="hide{{showView?'show':''}}">
+    <!--绑定回填事件-->
+    <view>
+      <!--根据需求渲染相应数据-->
+      <!--渲染地址title-->
+      <view class='title' bindtap="backfill" id="{{index}}">{{item.title}}</view>
+      <!--渲染详细地址-->
+      <view class='addr'>{{item.addr}}</view>
+    </view>
+  </view>
+   <view class="main hide{{showView?'show':''}}">
+    <scroll-view scroll-y style="height: 1056rpx;" class='scroll' scroll-top='{{topNum}}'>
+      <view class='details' wx:for='{{suggestion}}' wx:for-item='i' wx:key='{{i.id}}' >
+        <view class='bottom-left' bindtap='toDetails' data-pkname="{{i.pkname}}" data-distance="{{i.distance}}" data-address="{{i.address}}" data-spaceBitNum="{{i.spaceBitNum}}" data-carBitNum="{{i.carBitNum}}"> 
+          <view class='text-left one'>{{i.pkname==null ? "" : i.pkname}}</view>
+          <view class='text-left two'>{{i.distance==null ? "" : i.distance}}km | {{i.address==null ? "" : i.address}}</view>
+          <view class='text-left three'>余位:{{i.carBitNum-i.carBitNumLeft==null ? "" : i.carBitNum-i.carBitNumLeft}}/总车位:{{i.carBitNum==null ? "" : i.carBitNum}}</view>
+        </view>
+        <view class='bottom-right'>
+          <image class='text-right' src='../../../images/daohang.png' bindtap='navigation' data-name='{{i.pkname}}' data-coordinate="{{i.coordinate}}" data-address='{{i.address}}'></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="main hide{{showView?'':'show'}}">
+    <scroll-view scroll-y style="height: 1056rpx;" class='scroll' scroll-top='{{topNum}}'>
+      <view class='details' wx:for='{{parkList}}' wx:for-item='i' wx:key='{{i.id}}' >
+        <view class='bottom-left' bindtap='toDetails' data-pkname="{{i.pkname}}" data-distance="{{i.distance}}" data-address="{{i.address}}" data-spaceBitNum="{{i.spaceBitNum}}" data-carBitNum="{{i.carBitNum}}" data-carBitNumLeft="{{i.carBitNumLeft}}" data-coordinate="{{i.coordinate}}" data-feeRemark="{{i.feeRemark}}"> 
+          <view class='text-left one'>{{i.pkname==null ? "" : i.pkname}}</view>
+          <view class='text-left two'>{{i.distance==null ? "" : i.distance}}km | {{i.address==null ? "" : i.address}}</view>
+          <view class='text-left three'>余位:{{i.carBitNum-i.carBitNumLeft==null ? "" : i.carBitNum-i.carBitNumLeft}}/总车位:{{i.carBitNum==null ? "" : i.carBitNum}}</view>
+        </view>
+        <view class='bottom-right'>
+          <image class='text-right' src='../../../images/daohang.png' bindtap='navigation' data-name='{{i.pkname}}' data-coordinate="{{i.coordinate}}" data-address='{{i.address}}'></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

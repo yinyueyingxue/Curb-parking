@@ -1,0 +1,36 @@
+<!--pages/my-car/my-car.wxml-->
+<view class='view-page'>
+  <navbar page-name="我的车辆"></navbar>
+</view>
+<view class="lineView" style="position: fixed;"></view>
+
+<view class='pageW' style="margin-top:{{navH}}px">
+  <view class='tip'>
+    <text class="blackTextColor fontSize32" style="font-weight:bold;">绑定车辆</text>
+    <text class="drayText9 fontSize24" style="margin-left:20rpx">最多绑定三辆车</text>
+  </view>
+  <view class='coat'>
+    <view wx:if="{{carList.length!=0}}" style='width:95%;'>
+      <view wx:for="{{carList}}" wx:key="{{item.id}}" >
+      <view class='car'>
+        <image class="car-image" src="../../../images/carlist.png"></image>
+        <text class='plate'>{{item.plateNo}}</text> 
+        <view class="bottomView">
+          <view class="bottomView-left" bindtap="showuntyingCar" data-plateNo="{{item.plateNo}}">
+            <text class="blueTextColor fontSize28">解除绑定</text>
+          </view>
+          <view class="bottomView-right">
+            <text class="blackTextColor fontSize28">余额自动支付</text>
+            <image style="width:104rpx; height:40rpx; margin-left:24rpx;" src="../../../images/pay-n.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    </view>
+    <view wx:else class='nodataBox'>
+      <image src='../../../images/quesheng.png'></image>
+      暂无数据
+    </view>
+  </view>
+  <button class='submit blueColor' bindtap='bindingCar'>绑定车辆</button>
+</view>

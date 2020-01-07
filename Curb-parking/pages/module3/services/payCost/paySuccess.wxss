@@ -1,0 +1,124 @@
+/* pages/module3/services/payCost/paySuccess.wxss */
+.page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  background:rgba(245,245,245,1);
+}
+.top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  background:rgba(255,255,255,1);
+  width: 100vw;
+  border-bottom: 1rpx solid rgba(230,230,230,1);
+  border-top: 1rpx solid rgba(230,230,230,1);
+}
+
+.invoiceView {
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: chartreuse; */
+  width: 90vw;
+  height: 35px;
+}
+
+.invoiceView-view {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* background-color: yellow; */
+  width: 80px;
+  height: 35px;
+}
+
+.invoiceView-view-image {
+  /* background-color: red; */
+  width: 16px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.invoiceView-view-text {
+  font-size: 16px;
+  color: rgba(153,153,153,1);
+}
+.detail{
+   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background:rgba(255,255,255,1);
+  height: 230px;
+  padding-top: 30px;
+}
+.item{
+  position: relative;
+  height: 60px;
+}
+.left{
+  display: flex;
+  float: left;
+  height:21px;
+  font-size:15px;
+  font-family:PingFang-SC;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  line-height:21px;
+  margin-left: 15px;
+  }
+.right{
+  display: flex;
+  float: right;
+  height:20px;
+  font-size:14px;
+  font-family:PingFang-SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:20px;
+  text-align: right;
+  position: relative;
+  margin-right: 15px;
+}
+.money{
+  height:48px;
+  font-size:40px;
+  font-family:HelveticaNeue;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:49px;
+  padding-top: 15px;
+}
+.image{
+  width: 70px;
+  height: 110px;
+  margin-top: 20px;
+}
+.moneyleft{
+  height:16px;
+  font-size:14px;
+  font-family:HelveticaNeue;
+  color:rgba(51,51,51,1);
+  line-height:16px;
+}
+
+.completeView {
+  width: 100vw;
+  height: 60rpx;
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.completeView-btn {
+  background: white;
+  width: 360rpx;
+  border-radius: 50rpx;
+  border:1px solid rgba(64,126,194,1);
+}

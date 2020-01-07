@@ -1,0 +1,78 @@
+<view class='view-page'>
+  <navbar page-name="订单详情"></navbar>
+</view>
+
+<view class="page" style="margin-top:{{marginTop}}">
+  <view class="header_change">
+    <view>
+      <label class="amount" hidden="{amount==null ? true : false}">￥{{amount}}</label>
+
+    </view>
+    <view>
+      <label class="info2">已出场</label>
+    </view>
+    <!-- <view class="pic">
+      <image class="image1" src="{{picurl}}" bindtap="showimg" mode="scaleToFill" />
+
+    </view> -->
+  </view>
+  <view class='br'>
+  </view>
+  <view class="fontbotom">
+    <view class="weui_cell">
+      <view class="weui_cell_bd weui_cell_primary">
+        <label> 停车地点</label>
+      </view>
+      <view class="weui_cell_ft" hidden="{pkName==null ? true : false}">
+        <label> {{pkName}}</label>
+      </view>
+    </view>
+  </view>
+  <view class="fontcen">
+    <view class="weui_cell">
+      <view class="weui_cell_bd weui_cell_primary">
+        <label> 车牌号</label>
+      </view>
+      <view class="weui_cell_ft" hidden="{plateNo==null ? true : false}">
+        <label>{{plateNo}} </label>
+      </view>
+    </view>
+    <view class="weui_cell">
+      <view class="weui_cell_bd weui_cell_primary">
+        <label> 入场时间</label>
+      </view>
+      <view class="weui_cell_ft" hidden="{inTime==null ? true : false}">
+        <label>{{inTime}} </label>
+      </view>
+    </view>
+    <view class="weui_cell">
+      <view class="weui_cell_bd weui_cell_primary">
+        <label> 停车时长</label>
+      </view>
+      <view class="weui_cell_ft" hidden="{parkTime==null ? true : false}">
+        <label> {{parkTime}}</label>
+      </view>
+    </view>
+    <view class="weui_cell">
+      <view class="weui_cell_bd weui_cell_primary">
+        <label>优惠金额</label>
+      </view>
+      <view class="weui_cell_ft" hidden="{discountAmount==null ? true : false}">
+        <label> ￥</label>
+        <label> {{discountAmount}}</label>
+      </view>
+    </view>
+    <view class="weui_cell">
+      <view class="weui_cell_bd weui_cell_primary">
+        <label> 应缴金额</label>
+      </view>
+      <view class="weui_cell_ft" hidden="{amount==null ? true : false}">
+        <label> ￥</label>
+        <label class="payamount">{{amount}}</label>
+      </view>
+    </view>
+  </view> 
+</view>
+<view class="bigimg {{imgshow?'boxshow':'boxhide'}}" bindtap="closeimg">
+  <image class="image2" src="{{picurl}}" mode="scaleToFill" />
+</view>

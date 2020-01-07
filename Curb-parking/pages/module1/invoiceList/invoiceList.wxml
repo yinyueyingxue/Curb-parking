@@ -1,0 +1,131 @@
+<!-- pages/module1/invoiceList/invoiceList.wxml -->
+<view class='view-page'>
+  <navbar page-name="停车开票"></navbar>
+</view>
+
+<scroll-view class="scroll-view" scroll-y="{{isScroll}}" style="margin-top:{{navH}}px">
+    <view wx:if="{{listModels.length != 0}}">
+      <view class="topView">
+        <view class="topLeftView">
+          <text class="drayTextColor fontSize26">订单记录</text>
+        </view>
+        <view class="topRightView" bindtap="filtrateViewClick">
+          <image class="topRightView-image" src="../../../images/shaixuan.png"></image>
+          <text class="drayTextColor fontSize26">订单筛选</text>
+        </view>
+      </view>
+      <view class="cententView">
+        <view class="cententView-view">
+          <view class="listView" wx:for="{{listModels}}" wx:key="{{item}}">
+            <view class="list-listView">
+              <view class="list-leftView" bindtap="listSelectViewClick" data-index="{{item.index}}">
+                <image class="list-leftView-image" src="{{item.listSelect==true ? '../../../images/selectedS.png' :'../../../images/unselected.png'}}"></image>
+              </view>
+              <view class="list-cententView">
+                <view class="list-centent-topView" hidden="{{item.inTime==null ? true : false}}">
+                  <image class="list-contentView-image" src="../../../images/timeicon.png"></image>
+                  <text class="drayTextColor fontSize28" style="margin-left:20rpx">出场时间:{{item.inTime}}</text>
+                </view>
+                <view class="list-centent-cententView" hidden="{{item.plateNo==null ? true : false}}"> 
+                  <image class="list-contentView-image" style="background:#FF8000"></image>
+                  <text class="fontSize28" style="margin-left:20rpx; color:#333333">{{item.plateNo}}</text>
+                </view>
+                <view class="list-centent-bottomView" hidden="{{item.pkName==null ? true : false}}">
+                  <image class="list-contentView-image" style="background:#407EC2"></image>
+                  <text class="fontSize28" style="margin-left:20rpx; color:#333333">{{item.pkName}}</text>
+                </view>
+              </view>
+                <view class="list-rightView blueTextColor fontSize36" hidden="{{item.amount==null ? true : false}}">￥{{item.amount}}                    </view>
+            </view>
+            <view class="lineViewMarginLeft"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='nodataBox'>
+      <image src='../../../images/quesheng.png'></image>
+      暂无数据
+    </view>
+</scroll-view>
+<view hidden="{{listModels.length == 0 ? true : false}}">
+  <view class="bottomView-topView" hidden="{{bottomViewHidden}}" style="bottom:{{bottomViewHeight}}">
+      <text class="blueTextColor fontSize24" style="margin-left:18rpx" hidden="{{totalNumber==null ? true : false}}">{{totalNumber}}</text>
+      <text class="drayTextColor fontSize24">个订单</text>
+      <text class="drayTextColor fontSize24" style="margin-left:16rpx">共</text>
+      <text class="blueTextColor fontSize24" hidden="{{totalMoney==null ? true : false}}">{{totalMoney}}</text>
+      <text class="drayTextColor fontSize24">元</text>
+    </view>
+    <view class="lineView-line"></view>
+    <view class="bottomView" style="height:{{bottomViewHeight}}">
+      <view class="bottomView-left" bindtap="bottomTypeViewClick" data-index="{{0}}">
+        <image class="bottomView-centent-image" src="{{farmingSelect==false ? '../../../images/unselected.png' :'../../../images/selectedS.png'}}"></image>
+        <text class="fontSize26">本页选择</text>
+      </view>
+      <view class="bottomView-centent" bindtap="bottomTypeViewClick" data-index="{{1}}">
+        <image class="bottomView-centent-image" src="{{completeSelect==false ? '../../../images/unselected.png' :'../../../images/selectedS.png'}}"></image>
+        <text class="fontSize26">全部选择</text>
+      </view>
+      <view class="bottomView-right" bindtap="nextBtnClick">
+        <view class="bottomView-right-view fontSize32">下一步</view>
+      </view>
+  </view>
+</view>
+<view class="maskView" hidden="{{maskHidden}}">
+  <view class="contentView-left" bindtap="maskViewClick"></view>
+  <view class="contentView-right">
+    <view class="titleView blackTextColor fontSize28">入场日期</view>
+    <view class="dataView">
+      <view class="dataView-view drayTextColor fontSize28" bindtap="dataViewClick" data-index="{{0}}">{{enterDate=='' ? newDate : enterDate}}</view>
+      <view class="dataView-line"></view>
+      <view class="dataView-view drayTextColor fontSize28" bindtap="dataViewClick" data-index="{{1}}">{{comeDate=='' ? newDate : comeDate}}</view>
+    </view>
+    <view class="titleView blackTextColor fontSize28">金额范围（元）</view>
+    <view class="moneyView">
+      <input class="moneyView-input fontSize28" placeholder="最低价" data-index="{{0}}" bindinput="bindLowPriceInput" value="{{lowStr}}"></input>
+      <view class="dataView-line"></view>
+      <input class="moneyView-input fontSize28" placeholder="最高价" data-index="{{1}}" bindinput="bindHeightPriceInput" value="{{heightStr}}"></input>
+    </view>
+    <view class="titleView blackTextColor fontSize28">车场所在地</view>
+    <view class="cityView" >
+      <view class="cityView-view fontSize28" style='{{item.select==true?"color:white; background:rgba(64,126,194,1);":"color:#333333; background:rgba(249,249,249,1);"}} z-index:999;' wx:for="{{cityList}}" wx:key="{{item}}" bindtap="cityViewClick" data-cityId="{{item.cityId}}" hidden="{{item.cityName==null ? true : false}}">{{item.cityName}}</view>
+    </view>
+    <view class="markView-bottom" style="height:{{bottomViewHeight}}">
+      <view class="markView-bottom-left" bindtap="resetViewClick">
+        <text class="whiteTextColor fontSize34">重置</text>
+      </view>
+      <view class="markView-bottom-right whiteTextColor fontSize34" bindtap="confirmViewClick">
+        <text class="whiteTextColor fontSize34">确定</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="maskDataView" hidden="{{dataHidden}}" bindtap="maskDataViewClick">
+  <view class="dataView-data">
+    <view class="dataView-dataTop">
+      <view class="dataView-cancelView" bindtap="cancelClick">
+        <text class="drayTextColor fontSize28">取消</text>
+      </view>
+      <view class="dataView-titleView">
+        <text class="blackTextColor fontSize32">日期选择</text>
+      </view>
+      <view class="dataView-confirmView" bindtap="confirmClick">
+        <text class="blueTextColor fontSize28">确定</text>
+      </view>
+    </view>
+    <view class="dataView-pickerView">
+      <picker-view class="dataView-pickerView-picker" indicator-style="height: 80rpx;" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+          <view class="yearsView daryTextColor fontSize32" wx:for="{{years}}" wx:key="{{item}}" style="line-height: 50px; text-">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view class="monthsView daryTextColor fontSize32" wx:for="{{months}}" wx:key="{{item}}" style="line-height: 50px">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view class="daysView daryTextColor fontSize32" wx:for="{{days}}" wx:key="{{item}}" style="line-height: 50px">{{item}}日</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>

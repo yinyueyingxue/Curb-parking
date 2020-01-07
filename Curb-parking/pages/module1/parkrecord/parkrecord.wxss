@@ -1,0 +1,407 @@
+.container {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+  height: 100rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 3001;
+}
+
+.titleSel {
+  color: #5f6fee;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleUnsel {
+  color: #858fab;
+  font-size: #858fab;
+}
+
+.headerLineSel {
+  background: #5f6fee;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.swiperview {
+  /* background-color: red; */
+  width: 100%;
+  height: 90%;
+}
+
+.swiper {
+  /* background: yellow; */
+  width: 100%;
+  flex: 1;
+  overflow: scroll;
+  top: 100rpx;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.recordItem {
+  margin-top: 10rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+
+.page {
+  background: #f5f5f5;
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.titletext {
+  display: inline-block;
+  width: 50%;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: #999999;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.titletextbd {
+  display: inline-block;
+  width: 50%;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: #333333;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.listView {
+  /* background: red; */
+  width: 710rpx;
+  margin: 20rpx auto;
+}
+
+.flex-item {
+  display: block;
+  width: 100%; 
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+  border-radius:8rpx;
+  margin-top: 20rpx;
+  line-height: 30rpx;
+}
+
+.pkname-item {
+  color: rgba(51, 51, 51, 1);
+}
+
+.line {
+  height: 2rpx;
+  width: calc(100%);
+  background-color: rgba(230, 230, 230, 1);
+  margin-bottom: 19rpx;
+  margin-right: -30rpx;
+}
+
+.plate-item {
+  margin-top: 6rpx;
+  height: 42rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  line-height: 42rpx;
+}
+
+.bg_red {
+  height: 45rpx;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color:  #407EC2;
+  line-height: 45rpx;
+}
+
+.state-item {
+  height: 45rpx;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 45rpx;
+  position: relative;
+  bottom: 92rpx;
+  right: 30rpx;
+  text-align: right;
+  margin-right: -30rpx;
+}
+
+.jiantouview {
+  position: relative;
+  float: right;
+  right: 30rpx;
+  width: 100rpx;
+  text-align: right;
+}
+
+.jiantou {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.pknametext {
+  display: inline-block;
+}
+
+.showline2 {
+  background-color: #0ba1ff;
+  margin-top: -4rpx;
+  width: 60rpx;
+  height: 4rpx;
+  position: relative;
+  left: 95rpx;
+  border-radius: 2rpx;
+}
+
+.unshowline2 {
+  width: 100rpx;
+  margin-top: -4rpx;
+  height: 4rpx;
+  position: relative;
+  left: 140rpx;
+}
+
+/* 长租续费记录样式 */
+.longRent {
+  background: #f0f;
+  width: 94%;
+  padding: 20rpx 0rpx 0rpx 0rpx;
+  /* height: 100vw; */
+}
+.longRentList {
+  background: #ff0;
+  /* width: 100%; */
+  height: 300rpx;
+  margin-bottom: 20rpx;
+  /* padding: 20rpx; */
+}
+
+
+.swiperview3 {
+  margin-top: 20rpx;
+  height: 100%;
+}
+
+/*
+  新加页面样的设置
+*/
+
+.contentTop {
+  /* background: yellow; */
+  width: 100%;
+  display: flex;
+}
+
+.contentTop-left {
+  /* background: orange; */
+  width: 70%;
+  height: 100%;
+  margin-left: 30rpx;
+}
+
+.parkingName {
+  margin-top: 52rpx;
+}
+
+.carNumber {
+  margin-top: 20rpx;
+}
+
+.carTime {
+  margin-top: 10rpx;
+}
+
+.lookTime {
+  margin-top: 10rpx;
+}
+
+.contentTop-right {
+  /* background: chartreuse; */
+  width: 30%;
+  height: 100%;
+  margin-right: 30rpx;
+}
+
+.typeText {
+  margin-top: 90rpx;
+  text-align: right;
+}
+
+.DMoneyText {
+  margin-top: 20rpx;
+  text-align: right;
+}
+
+.YMoneyText {
+  margin-top: 10rpx;
+  text-align: right;
+}
+
+.contentC {
+  background: #E6E6E6;
+  width: 100%;
+  height: 2rpx;
+}
+
+.contentBottom {
+  /* background: cyan; */
+  width: 90%;
+  height: 112rpx;
+  margin: 0rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lookDetails {
+  /* background: cornflowerblue; */
+  width: 30%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.payView {
+  width: 180rpx;
+  height: 60rpx;
+  border: 2rpx solid #407EC2;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentBotText {
+  /* background: yellow; */
+  width: 280rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+/* 长租续费记录 */
+.longCarListView {
+  /* background: cyan; */
+  /* height: 318rpx; */
+  width: 710rpx;
+  margin: 20rpx auto;
+  border-radius: 8rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.longCarListView-content {
+  /* background: yellow; */
+  /* height: 90%; */
+  width: 92%;
+}
+
+.longCarListView-contentTop {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rpx;
+  /* background: red; */
+}
+
+.longCarListView-contentBot {
+  /* background: chocolate; */
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  width: 100%;
+  /* height: 40rpx; */
+  display: flex;
+  /* align-items: center; */
+}
+
+.longCarListView-contentBotLeft {
+  width: 20%;
+  height: 30rpx;
+  /* background: yellow; */
+  display: flex;
+  /* align-items: center; */
+}
+
+.longCarListView-contentBotRight {
+  width: 80%;
+  /* height: 30rpx; */
+  /* background: cyan; */
+  display: flex;
+  /* align-items: center; */
+}
+
+
+/* 余额明细 */
+.balanceListView {
+  width: 100%;
+  /* height:300rpx; */
+  background: white;
+}
+
+.balanceListView-contentTop {
+  width: 710rpx;
+  margin: 0rpx auto;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 10rpx; */
+  /* background: red; */
+}
+
+.balanceListView-contentBot {
+  /* background: chocolate; */
+  width: 710rpx;
+  margin: 0rpx auto;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  /* height: 40rpx; */
+  display: flex;
+  /* align-items: center; */
+}

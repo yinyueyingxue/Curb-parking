@@ -1,0 +1,51 @@
+/* pages/invoice-success/invoice-success.wxss */
+.top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success-icon{
+  width: 140rpx;
+  height: 140rpx;
+  margin-top: 162rpx;
+}
+.tip-top{
+  font-family: PingFang-SC-Medium;
+  color: #333333;
+  font-size: 34rpx;
+  margin-top: 50rpx;
+}
+.tip-bottom{
+  margin-top: 30rpx;
+  font-family:PingFang-SC-Regular;
+  font-size: 30rpx;
+  color: #BBBBBB;
+}
+.bottom{
+  margin: 183rpx auto;
+  border-top: 1px solid #E6E6E6;
+  width: 90%;
+}
+.bottom-left,.bottom-right{
+  display: inline-flex;
+  flex-direction: column;
+}
+.bottom-left{
+  float: left;
+}
+.bottom-right{
+  float: right;
+}
+.text-left, .text-right{
+  font-size: 30rpx;
+  font-family:PingFang-SC-Regular;
+  margin-top: 40rpx;
+}
+.text-left{
+  color: #999999;
+  text-align: left;
+}
+.text-right{
+  color: #333333;
+  text-align: right;
+}

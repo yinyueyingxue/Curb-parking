@@ -1,0 +1,24 @@
+<!--pages/invoice-success/invoice-success.wxml-->
+<view class='view-page'>
+  <navbar page-name="开票成功"></navbar>
+</view>
+
+<view class='container' style="margin-top:{{navH}}">
+  <view class='top'>
+    <image class='success-icon' src="../../../images/success-icon.png"></image>
+    <text class='tip-top'>开票成功</text>
+    <text class='tip-bottom'>提示：请去相应的邮箱地址查看发票</text>
+  </view>
+  <view class='bottom'>
+    <view class='bottom-left'>
+      <text class='text-left'>抬头类型</text>
+      <text class='text-left'>抬头名称</text>
+      <text class='text-left'>开票金额</text>
+    </view>
+    <view class='bottom-right'>
+      <text class='text-right'>企业发票</text>
+      <text class='text-right'>炸弹之王砰砰</text>
+      <text class='text-right'>10.00元</text>
+    </view>
+  </view>
+</view>

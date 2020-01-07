@@ -1,0 +1,79 @@
+/* pages/module2/topUp/topUp.wxss */
+.backView {
+  width: 100vw;
+  height: 90vh;
+  margin-top: 20rpx;
+}
+.topView {
+  width: 93vw;
+  height: 280rpx;
+  background: #407EC2;
+  margin: 20rpx 24rpx;
+  border-radius: 12rpx;
+  /* display: flex */
+}
+
+.topView-top {
+  /* margin-top: 62rpx; */
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topView-title {
+  margin-top: 60rpx;
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleView {
+  width: 93vw;
+  height: 60rpx;
+  margin: 42rpx 0rpx 24rpx 24rpx;
+  /* background: chartreuse; */
+}
+
+.listView {
+  /* background: red; */
+  width: 96vw;
+  /* height: 280rpx; */
+  margin: -30rpx 0rpx 14rpx 14rpx;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.butView {
+  margin: 12rpx 12rpx;
+  width: 217rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-around; */
+  
+}
+
+.inputMoney {
+  background: #F6F6F6;
+  margin-left: 24rpx;
+  height: 80rpx;
+  width: 460rpx;
+  display: flex;
+  align-items: center;
+}
+
+.bottomView {
+  background: #407EC2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 93vw;
+  height: 100rpx;
+  margin: 60rpx 24rpx;
+  border-radius: 10rpx;
+}

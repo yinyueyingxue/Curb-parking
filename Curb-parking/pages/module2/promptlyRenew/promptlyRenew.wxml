@@ -1,0 +1,38 @@
+<!--pages/module2/promptlyRenew/promptlyRenew.wxml-->
+<view class='view-page'>
+  <navbar page-name="长租车位"></navbar>
+</view>
+
+<view class="page" style="margin-top:{{navH}}px">
+  <view class="titleView">
+    <text class="blackTextColor fontSize32" style="font-weight:bold;">续期周期数（{{typeName}}）</text>
+  </view>
+  <view class="listView">
+    <view class="butView" wx:for="{{list}}" wx:key="{{item}}" style='{{item.status==0 ? "background:#F6F6F6;":"background:#E1E1E1;"}}' bindtap="butViewClick" data-number="{{item.number}}">
+      <text class="blackTextColor fontSize36">{{item.number}}</text>
+    </view>
+  </view>
+  <view class="starTimeView">
+    <text class="drayText9 fontSize28">开始时间：</text>
+    <text class="blackTextColor fontSize28">{{startTime}}</text>
+  </view>
+  <view class="endTimeView">
+    <text class="drayText9 fontSize28">结束时间：</text>
+    <text class="blackTextColor fontSize28">{{endTime}}</text>
+  </view>
+  <view class="contentView">
+    <text class="blackTextColor fontSize28">{{chargingRule}}元/{{typeName}}，共计：</text>
+    <text class="blueTextColor fontSize48">￥{{chargingRule * number}}</text>
+  </view>
+  <view class="reminderView">
+    <view style="height:40rpx; display: flex; align-items: center;">
+      <text class="fontSize24" style="color:#bbbbbb; position: relative;">温馨提示:</text>
+    </view>
+    <view style="height:40rpx; display: flex; align-items: center;">
+      <text class="fontSize24" style="color:#bbbbbb; position: relative;">您续费后，长租时间从此刻算起</text>
+    </view>
+  </view>
+  <view class="bottomView">
+    <text class="whiteTextColor fontSize32">立即续费</text>
+  </view>
+</view>

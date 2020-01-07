@@ -1,0 +1,132 @@
+<view class='view-page'>
+  <navbar page-name="订单详情"></navbar>
+</view>
+
+<view class="page" style="margin-top:{{navH}}px"> 
+    <view class="header_change">
+        <!-- <view class="headtc">
+            <image  class="image" src="/image/P.png" mode="scaleToFill" />
+            <label class="info1">临停车费</label>
+        </view>  -->
+        <view class="top" hidden="{{unpayamount==null ? true : false}}">
+          <text class="money"><text class='moneyleft'>￥</text>{{unpayamount}}</text>
+          <text class="state">{{carstatus == 3 ? "已出场" : "待出场"}}</text>
+        </view>
+    </view>
+    <view class='br'>
+    </view>
+     <view class="fontbotom" hidden="{{pkname==null ? true : false}}">
+         <view class="weui_cell">
+            <view class="weui_cell_bd weui_cell_primary">
+                <label> 停车地点</label>
+            </view>
+            <view class="weui_cell_ft">
+                <label> {{pkname}}</label>
+            </view>
+        </view>
+    </view>
+    <view class="fontcen">
+        <view class="weui_cell" hidden="{{plateno==null ? true : false}}">
+            <view class="weui_cell_bd weui_cell_primary">
+                <label> 车牌号</label>
+            </view>
+            <view class="weui_cell_ft">
+                <label>{{plateno}} </label>
+            </view>
+        </view>
+         <view class="weui_cell" hidden="{{intime==null ? true : false}}">
+            <view class="weui_cell_bd weui_cell_primary">
+                <label> 入场时间</label>
+            </view>
+            <view class="weui_cell_ft">
+                <label>{{intime}} </label>
+            </view>
+        </view>
+         <view class="weui_cell" hidden="{{parktime==null ? true : false}}">
+            <view class="weui_cell_bd weui_cell_primary">
+                <label> 停车时长</label>
+            </view>
+            <view class="weui_cell_ft">
+                <label> {{parktime}}</label>
+            </view>
+        </view>
+         <view class="weui_cell" hidden="{{unDiscountAmount==null ? true : false}}">
+            <view class="weui_cell_bd weui_cell_primary">
+                <label>优惠金额</label>
+            </view>
+            <view class="weui_cell_ft">
+                <label> ￥</label>
+                <label> {{unDiscountAmount}}</label>
+            </view>
+        </view>
+         <view class="weui_cell" hidden="{{unpayamount==null ? true : false}}">
+            <view class="weui_cell_bd weui_cell_primary">
+                <label>总金额</label>
+            </view>
+            <view class="weui_cell_ft">
+                <label> ￥</label>
+                <label class="payamount">{{unpayamount+unDiscountAmount}}</label>
+            </view>
+        </view>
+    </view>
+   
+  
+    <view class="btbox" style="bottom:{{butBottomM}}" hidden="{{primaryHidden}}">
+        <button  class="weui_btn weui_btn_primary blueColor" type="submit" size="defaultSize" bindtap="btnSubmitPaymentRequest"> 立即支付 </button>
+    </view>
+</view>
+<view class="bigimg {{imgshow?'boxshow':'boxhide'}}" bindtap="closeimg"  >
+        <image class="image2" src="{{picurl}}" mode="scaleToFill" /> 
+    </view>
+
+<view class="maskView" hidden="{{markViewHidden}}">
+  <view class="bottomView"> 
+    <view class="bottomListView">
+      <view class="bottomListView-top">
+        <view style="width:10%; height:100%; display:flex; justify-content:center; align-items:center;" bindtap="maskViewClick">
+          <image src="../../../images/back.png" style="width:26rpx; height:42rpx;"></image>
+        </view>
+        <view style="width:80%; height:100%; display:flex; justify-content: center; align-items:center;">
+          <text class="blackTextColor fontSize36">请选择支付方式</text>
+        </view>
+      </view>
+      <view class="lineView"></view>
+      <view class="bottomListView-list" bindtap="payTypeClick">
+        <image style="width:46rpx; height:52rpx;" src="../../../images/yue.png"></image>
+        <text class="blackTextColor fontSize32" style="margin-left:26rpx;">钱包余额(10.00)</text>
+      </view>
+      <view class="lineView"></view>
+      <view class="bottomListView-list" bindtap="payTypeClick">
+        <image style="width:46rpx; height:52rpx;" src="../../../images/yue.png"></image>
+        <text class="blackTextColor fontSize32" style="margin-left:26rpx;">德充网余额(10.00)</text>
+      </view>
+      <view class="lineView"></view>
+      <view class="bottomListView-list">
+        <image style="width:50rpx; height:50rpx;" src="../../../images/weixin.png"></image>
+        <text class="blackTextColor fontSize32" style="margin-left:26rpx;">微信</text>
+      </view>
+      <view class="lineView"></view>
+      <view style="height:120rpx; width:100%"></view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 密码输入框 -->
+<view wx:if='{{showPayPwdInput}}'>
+    <view class='bg_layer'></view>
+    <view class='input_main'>
+        <view class='input_title'>
+            <view class='input_back' catchtap='hidePayLayer'><text></text></view>
+            <text>输入支付密码</text>
+        </view>
+        <view class='input_tip'></view>
+        <view class='input_row' catchtap='getFocus'>
+            <view class='pwd_item' wx:for='{{6}}' wx:key='item' wx:for-index='i'>
+                <text wx:if='{{pwdVal.length>i}}'></text>
+            </view>
+        </view>
+        <view class='forget_pwd' catchtap='slipPasswordClick'>忘记密码?</view>
+        <input class='input_control' password type='number' focus='{{payFocus}}' bindinput='inputPwd' maxlength='6'/>
+    </view>
+</view>

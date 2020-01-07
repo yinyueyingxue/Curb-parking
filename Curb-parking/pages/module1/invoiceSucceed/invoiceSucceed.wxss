@@ -1,0 +1,59 @@
+/* pages/module1/invoiceSucceed/invoiceSucceed.wxss */
+
+page{
+  background-color: rgba(249,249,249,1);
+}
+
+.backView {
+  background-color: rgba(249,249,249,1);
+  width: 100vw;
+  height: 90vh;
+}
+
+.imageView {
+  /* background: red; */
+  width: 100vw;
+  height: 100rpx;
+  margin-top: 176rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconImage {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.succeedView {
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hintView {
+  width: 100vw;
+  height: 60rpx;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.completeView {
+  width: 100vw;
+  height: 60rpx;
+  margin-top: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.completeView-btn {
+  width: 300rpx;
+  border-radius: 50rpx;
+  border:1px solid rgba(64,126,194,1);
+}

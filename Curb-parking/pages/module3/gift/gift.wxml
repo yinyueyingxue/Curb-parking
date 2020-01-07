@@ -1,0 +1,9 @@
+
+<view class='view-page'>
+  <navbar page-name="西湖礼物"></navbar>
+  <view class='page-content'>
+    <!--这里放你的内容-->
+  </view>
+</view>
+
+<web-view src="https://mp.weixin.qq.com/s/GiOqlQj5VpPDLUN-u_ey9Q"></web-view>

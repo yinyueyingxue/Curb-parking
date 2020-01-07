@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "navigationBarTitleText": "支付成功",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black"
+}

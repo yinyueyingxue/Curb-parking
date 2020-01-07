@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "navigationBarTitleText": "附近停车场",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black"
+}

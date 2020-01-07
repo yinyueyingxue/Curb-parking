@@ -1,0 +1,90 @@
+<!--pages/module2/homepage/homepage.wxml-->
+<view class='navbarView' style="height:{{navH}}px">
+  <view class="navTitleView"style="margin-top:{{navT}}px" >
+    <text class="fontSize32">算停车</text>
+  </view>
+</view>
+<view class="backView" style="margin-top:{{navH}}px;">
+  <swiper class='swiper' indicator-dots="{{indicatorDots}}" style='margin-top:24rpx;margin-left:24rpx;margin-right:24rpx;border-radius:5px'
+autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color='#D8D8D8' indicator-active-color='#4B56A1' circular='{{circular}}'>
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item style="border-radius:5px">
+        <image src="../../../images/homepageswiper.png" class="slide-image" width="351" height="156" data-type="{{item.linkType}}" bindtap="linkUrl"/>
+      </swiper-item>
+    </block>  
+  </swiper>
+
+  <view class="butView">
+    <view class="butView-one">
+      <view class="butView-oneView" bindtap="stopCarClick">
+        <view class="butView-image">
+          <image style="width: 60rpx; height: 60rpx; background: #fff" src="../../../images/stopinvice.png"></image>
+        </view>
+        <view class="butView-text">
+          <text class="blackTextColor fontSize24">停车缴费</text>
+        </view>
+      </view> 
+    </view>
+    <view class="butView-one">
+      <view class="butView-oneView" bindtap="longRentCarClick">
+        <view class="butView-image">
+          <image style="width: 60rpx; height: 60rpx; background: #fff" src="../../../images/longcar.png"></image>
+        </view>
+        <view class="butView-text">
+          <text class="blackTextColor fontSize24">长租车位</text>
+        </view>
+      </view> 
+    </view>
+    <view class="butView-one">
+      <view class="butView-oneView" bindtap="walletTopUpClick">
+        <view class="butView-image">
+          <image style="width: 60rpx; height: 60rpx; background: #fff" src="../../../images/inputmoney.png"></image>
+        </view>
+        <view class="butView-text">
+          <text class="blackTextColor fontSize24">钱包充值</text>
+        </view>
+      </view> 
+    </view>
+  </view>
+
+  <view style="height:20rpx; width:100vw; background:#F5F5F5"></view>
+
+  <view class="titleView">
+    <text class="blackTextColor fontSize28" style="margin-left: 24rpx;">附近停车场</text>
+  </view>
+
+  <view style="width:93vw; height:2rpx; background:#F5F5F5; margin-left:24rpx; margin-rigth:24rpx;"></view>
+
+  <view wx:if="{{homeList.length!=0}}">
+    <view class="homeView" wx:for="{{homeList}}" wx:key="{{item}}">
+      <view class="listView">
+        <view class="listView-left">
+          <view class="listView-leftTop">
+            <text class="blackTextColor fontSize36">{{item.pkname}}</text>
+          </view>
+          <view class="listView-leftCenter">
+            <text class="drayText9 fontSize24">{{item.distance==null ? "" : item.distance}}km</text>
+            <view class="listView-leftCenter-view "></view>
+            <text class="drayText9 fontSize24">{{item.address==null ? "" : item.address}}</text>
+          </view>
+          <view class="listView-leftBot">
+            <text class="blueTextColor fontSize24">余位：{{item.carBitNum - item.carBitNumLeft==null ? "" : item.carBitNum - item.carBitNumLeft}}</text>
+            <view class="listView-leftCenter-view "></view>
+            <text class="drayText9 fontSize24">总车位：{{item.carBitNum==null ? "" : item.carBitNum}}</text>
+            <view class="listView-leftCenter-view "></view>
+            <text class="drayText9 fontSize24">充电桩</text>
+          </view>
+        </view>
+        <view class="listView-right" bindtap="navigation" data-name='{{item.pkname}}' data-coordinate="{{item.coordinate}}" data-address='{{item.address}}'>
+          <image style="height:72rpx; width:72rpx;" src="../../../images/daohang.png"></image>
+        </view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>
+  <view wx:else class='nodataBox'>
+    <image src='../../../images/quesheng.png'></image>
+    暂无数据
+  </view>
+
+</view>

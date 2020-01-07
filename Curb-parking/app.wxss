@@ -1,0 +1,133 @@
+/* page {
+  flex: 1;
+  display: flex;
+  background: #fff;
+} */
+.nodataBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh;
+    font-size: 30rpx;
+}
+.nodataBox image {
+    width:200rpx;
+    height: 200rpx;
+    margin-bottom: 20rpx;
+}
+
+.blueColor {
+  background-color: #407EC2;
+}
+
+.blueTextColor {
+  color: #407EC2;
+}
+
+.drayTextColor {
+  color:#888888;
+}
+
+.drayText6 {
+  color: #666666;
+}
+
+.drayText9 {
+  color: #999999;
+}
+
+.whiteTextColor {
+  color: white;
+}
+
+.blackTextColor {
+  color:#333333
+}
+
+.whiteBackColor {
+  background: white;
+}
+
+.line {
+  width: 100%;
+  height: 10rpx;
+  background-color: #F5F5F5;
+}
+
+.lineView {
+  width: 100%;
+  height: 2rpx;
+  background-color: #F5F5F5;
+}
+
+.lineViewMargin {
+  width: 90%;
+  height: 2rpx;
+  background-color:#F5F5F5;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.lineViewMarginLeft {
+  width: 97%;
+  height: 2rpx;
+  background-color:#F5F5F5;
+  margin-left: 20rpx;
+}
+
+.fontSize16 {
+  font-size: 16rpx;
+}
+
+.fontSize20 {
+  font-size: 20rpx;
+}
+
+.fontSize22 {
+  font-size: 22rpx;
+}
+
+.fontSize24 {
+  font-size: 24rpx;
+}
+
+.fontSize26 {
+  font-size: 26rpx;
+}
+
+.fontSize28 {
+  font-size: 28rpx;
+}
+
+.fontSize30 {
+  font-size: 30rpx;
+}
+
+.fontSize32 {
+  font-size: 32rpx;
+}
+
+.fontSize34 {
+  font-size: 34rpx;
+}
+
+.fontSize36 {
+  font-size: 36rpx;
+}
+
+.fontSize38 {
+  font-size: 38rpx;
+}
+
+.fontSize40 {
+  font-size: 40rpx;
+}
+
+.fontSize48 {
+  font-size: 48rpx;
+}
+
+.fontWeight{
+  font-weight: 500;
+}

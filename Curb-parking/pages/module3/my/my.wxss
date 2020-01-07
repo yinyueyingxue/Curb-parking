@@ -1,0 +1,171 @@
+/* pages/my/my.wxss */
+page{
+  background-color: #f5f5f5;
+}
+.header-image{
+ 
+  height: 90px;
+  position: absolute;
+  width: 90vw;
+  left: 5vw;
+  border-radius: 4px;
+
+}
+.swiperView{
+   width: 100vw;
+  height: 130px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+.header{
+  position: relative;
+  background-color: #ffffff;
+}
+.user-info{
+
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 110px;
+}
+.user-head{
+  position: relative;
+  margin-left: 30px;
+  width:140rpx;
+  height: 140rpx;
+  border-radius:50%;
+
+}
+.user-name{
+  position: relative;
+  font-size:36rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(65,65,65,1);
+  line-height:50rpx;
+  background-color:transparent;
+  border: 0rpx;
+   margin-left: 15rpx;
+  padding-left: 15rpx;
+}
+button::after {
+  border: none
+}
+
+.loginOut {
+  display: flex;
+  position: relative;
+  background-color: white;
+  top: 8rpx;
+  right: -60rpx;
+  height: 60rpx;
+  width: 160rpx;
+  font-size: 25rpx;
+  color: #666666;
+}
+
+.middle{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:rgba(255,255,255,1); 
+  margin-top: 20rpx;
+}
+.list-one, .list-two, .list-three, .list-four{
+  width: 90%;
+  height: 128rpx;
+}
+.list-one, .list-two{
+  border-bottom: 1rpx solid rgba(230,230,230,1);
+}
+.list-left{
+  float: left;
+  margin: 46rpx 0 0 0rpx;
+}
+.list-one .left-image{
+  width:42rpx;
+  height: 42rpx;  
+}
+.list-two .left-image{
+  width:42rpx;
+  height: 42rpx;  
+}
+.list-three .left-image{
+  width:42rpx;
+  height: 42rpx;  
+}
+.list-four .left-image{
+  width:42rpx;
+  height: 42rpx;  
+}
+.list-one .left-text{
+  font-size:28rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  margin: -52rpx 0 0 75rpx;
+}
+.list-two .left-text{
+  font-size:28rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  margin: -52rpx 0 0 75rpx;
+}
+.list-three .left-text{
+  font-size:28rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  margin: -52rpx 0 0 75rpx;
+}
+.list-four .left-text{
+  font-size:28rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  margin: -52rpx 0 0 75rpx;
+}
+.list-right{
+  float: right;
+  margin: 40rpx 0 0 0;
+}
+.right-image{
+  width: 26rpx;
+  height: 26rpx;
+}
+.footer{
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  background: #ffffff;
+  margin: 0 auto;
+}
+.footer-left, .footer-middle, .footer-right{
+  display: inline-block;
+  margin:10rpx 0 0 147rpx;
+  text-align: center;
+}
+
+.footer-image{
+  width: 54rpx;
+  height: 54rpx;
+}
+.footer-text{
+ font-size:20rpx;
+ font-family:PingFang-SC-Regular;
+}
+
+.phoneView {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120rpx;
+}
+
+.phoneView-text {
+  font-size: 25rpx;
+  color: #999999;
+}
+

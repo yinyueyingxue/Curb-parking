@@ -1,0 +1,21 @@
+<!--pages/module1/moreContent/moreContent.wxml-->
+<view class='view-page'>
+  <navbar page-name="停车开票"></navbar>
+</view>
+
+<view class="listView" style="margin-top:{{navH}}px">
+  <view class="titleView">
+    <text class="lineView-text drayTextColor fontSize28">备注说明</text>
+    <input class="listView-input blackTextColor fontSize28" placeholder-style="color:#BBBBBB;" placeholder='填写备注说明' bindinput="bindRemarkInput" value="{{inputRemark}}"></input>
+  </view>
+  <view class="lineViewMarginLeft"></view>
+  <view class="titleView">
+    <text class="lineView-text drayTextColor fontSize28">地址和电话</text>
+    <input class="listView-input blackTextColor fontSize28" placeholder-style="color:#BBBBBB;" placeholder='填写地址和电话' bindinput="bindAddressInput" value="{{inputAddress}}"></input>
+  </view>
+  <view class="lineViewMarginLeft"></view>
+  <view class="titleView">
+    <text class="lineView-text drayTextColor fontSize28">开户行及账号</text>
+    <input class="listView-input blackTextColor fontSize28" placeholder-style="color:#BBBBBB;" placeholder='请填写开户行及账号' bindinput="bindAccountInput" value="{{inputAccount}}"></input>
+  </view>
+</view>

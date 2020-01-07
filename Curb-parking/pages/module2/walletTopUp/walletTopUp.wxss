@@ -1,0 +1,28 @@
+/* pages/module2/walletTopUp/walletTopUp.wxss */
+page {
+  background: #f5f5f5;
+}
+
+.listView {
+  background: white;
+  width: 100vw;
+  margin-top: 24rpx;
+}
+
+.listView-top {
+  background: white;
+  width: 92vw;
+  height: 120rpx;
+  margin: 0rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paymentView {
+  margin-top: 24rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

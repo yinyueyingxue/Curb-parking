@@ -1,0 +1,33 @@
+<!--pages/module2/topUp/topUp.wxml-->
+<view class='view-page'>
+  <navbar page-name="钱包充值"></navbar>
+</view>
+<view class="backView" style="margin-top:{{navH}}px">
+  <view class="topView">
+    <view class="topView-top">
+      <text class="whiteTextColor" style="font-size:80rpx; margin-top:122rpx;">48</text>
+      <text class="whiteTextColor fontSize36" style="margin-top:142rpx;">元</text>
+    </view>
+    <view class="topView-title">
+      <text class="whiteTextColor fontSize24">钱包余额</text>
+    </view>
+  </view>
+  <view class="titleView">
+    <text class="blackTextColor fontSize34">充值额度</text>
+  </view>
+  <view class="listView">
+    <view class="butView" wx:for="{{list}}" wx:key="{{item}}" style='{{item.status==0 ? "background:#F6F6F6;":"background:#E1E1E1;"}}' bindtap="butViewClick" data-number="{{item.number}}">
+      <text class="blackTextColor fontSize36">{{item.number}}</text>
+      <text class="blackTextColor fontSize24" style="margin-top:8rpx;">元</text>
+    </view>
+  </view>
+  <view class="inputMoney">
+    <input style="height:60rpx; width:350rpx; margin-left:24rpx; font-size:28rpx;" bindinput="inputClick" placeholder="自定义金额" password type='number'></input>
+    <text class="fontSize28" style="margin-left:20rpx">元</text>
+  </view>
+  <view class="bottomView" bindtap="bottomViewClock">
+    <text class="whiteTextColor fontSize32">立即续费</text>
+  </view>
+</view>
+
+

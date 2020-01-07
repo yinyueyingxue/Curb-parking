@@ -1,0 +1,33 @@
+  <!--pages/register/register.wxml-->
+<view class='view-page'>
+  <navbar page-name="登录"></navbar>
+</view>
+<view class="lineView" style="position:fixed;"></view>
+
+<view class='coat' style="margin-top:{{navH}}px">
+  <image class='title' src='../../../images/spsLogo.png'></image>
+  <view class='mobile'>
+    <image class='icon' src='../../../images/shouji.png'></image>
+    <input bindinput='phoneInput' name='phone' class='input' placeholder='请输入您的手机号' placeholder-class='font'></input>
+  </view>
+  <view class='code'>
+    <view class='codeLeftBox'>
+      <image class='icon' src='../../../images/yanzhengma.png'></image>
+      <input class='input' bindinput='codeInput' id='plz' name='code' value='{{code}}' placeholder='请输入验证码' placeholder-class='font'></input>
+    </view>
+
+    <view class='send'>
+      <button class="abled" bindtap="verification" disabled="{{captchaDisabled}}" disabled-class="disabled">{{captchaLabel}}</button>
+    </view>
+  </view>
+  <button class='login blueColor' open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+  <view wx:if="{{showAuthorityRequestMask}}" class="authorityRequestMaskContainer">
+    <view class='authorityMask' />
+    <view class="modalPopupContainer">
+      <view id='authorizeNow' class="color-darkOrange font-boldest text-largest">立即授权</view>
+      <view id='slogan' class='text-small color-darkOrange'>停车 停车 停车</view>
+      <button class='modalPopupButton  bg-darkOrange' style='margin-top:20rpx' bindtap='refuse'>拒绝授权
+      </button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/module1/invoiceHistory/invoiceHistory.wxml-->
+<view class='view-page'>
+  <navbar page-name="开票历史"></navbar>
+</view>
+
+<view class="backView" style="margin-top:{{navH}}px">
+  <scroll-view class="view-scroll" wx:if="{{listModels != 0}}">
+      <view class="listView" wx:for="{{listModels}}" wx:key="{{item}}" bindtap="listViewClick" data-addressTel="{{item.addressTel}}" data-bankNum="{{item.bankNum}}" data-email="{{item.email}}" data-invoiceAmount="{{item.invoiceAmount}}" data-invoiceContent="{{item.invoiceContent}}" data-invoiceTime="{{item.invoiceTime}}" data-invoiceTitle="{{item.invoiceTitle}}" data-mobile="{{item.mobile}}" data-msg="{{item.msg}}" data-taxnum="{{item.taxNum}}" data-statusTitle="{{item.statusTitle}}" data-titleColor="{{item.titleColor}}">
+        <view class="listView-top">
+          <view class="listView-topLeft">
+            <image class="listView-topLeft-image" src="../../../images/timeicon.png"></image>
+            <text class="drayTextColor fontSize32" hidden="{{item.invoiceTime==null ? true : false}}">{{item.invoiceTime}}</text>
+          </view>
+          <view class="listView-topRight">
+            <text class="fontSize28" style="color:{{item.titleColor}}" hidden="{{item.statusTitle==null ? true : false}}">{{item.statusTitle}}</text>
+          </view>
+        </view>
+        <view class="listView-centent drayTextColor fontSize26" hidden="{{item.invoiceTitle==null ? true : false}}">{{item.invoiceTitle}}</view>
+        <view class="listView-bottom">
+          <text class="drayTextColor fontSize26" hidden="{{item.invoiceContent==null ? true : false}}">{{item.invoiceContent}}</text>
+          <text class="drayTextColor fontSize32" hidden="{{item.invoiceAmount==null ? true : false}}">{{item.invoiceAmount}}元</text>
+        </view>
+      </view>
+  </scroll-view> 
+  <view wx:else class='nodataBox'>
+    <image src='../../../images/quesheng.png'></image>
+    暂无数据
+  </view>
+</view>

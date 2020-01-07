@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "navigationBarTitleText": "我要吐槽",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black"
+}

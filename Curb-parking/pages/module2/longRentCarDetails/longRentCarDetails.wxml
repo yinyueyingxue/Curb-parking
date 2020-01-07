@@ -1,0 +1,72 @@
+<!--pages/module2/longRentCarDetails/longRentCarDetails.wxml-->
+<view class='view-page'>
+  <navbar page-name="长租车位"></navbar>
+</view>
+
+<view class="page" style="margin-top:{{navH}}px">
+  <view class="backView">
+    <view class="carListView blueColor">
+      <view class="carListView-view">
+        <view class="carListView-top">
+          <text class="whiteTextColor fontSize40">{{pkname}}</text>
+          <view class="rightView">
+            <image style="width:100%; height:100%;" hidden="{{status == 1 ? true : false}}" src="../../../images/stale-s.png"></image>
+          </view>
+        </view>
+        <view class="carListView-center">
+          <text class="whiteTextColor fontSize24">{{chargingRule}}元/{{typeName}}</text>
+          <view style="height:34rpx; width:2rpx; background:#F5F5F5; margin-left:40rpx; margin-right:40rpx;"></view>
+          <text class="whiteTextColor fontSize24">已绑定{{cycle}}辆车</text>
+        </view>
+        <view class="carListView-bottom">
+          <view class="carListView-bottom-view">
+            <view class="carListView-bottom-viewT">
+              <text class="whiteTextColor fontSize48">{{remainDays}}</text>
+            </view>
+            <view class="carListView-bottom-viewB">
+              <text class="whiteTextColor fontSize24">剩余天数</text>
+            </view>
+          </view>
+          <view class="carListView-bottom-view">
+            <view class="carListView-bottom-viewT">
+              <text class="whiteTextColor fontSize48">{{parkLotNum}}</text>
+            </view>
+            <view class="carListView-bottom-viewB">
+              <text class="whiteTextColor fontSize24">已租车位</text>
+            </view>
+          </view>
+          <view class="goPayView">
+            <text class="blueTextColor fontSize28">去续费</text>
+          </view>
+        </view>
+      </view> 
+    </view>
+  </view>
+  <view class="carMessageView">
+    <view class="carMessageView-title">
+      <text class="fontSize32" style="font-weight:bold;">车牌信息</text>
+    </view>
+    <view class="carMessageView-content">
+      <text class="blackTextColor fontSize28">{{palteNo}}</text>
+    </view>
+  </view>
+  <view class="carMessageView">
+    <view class="carMessageView-title">
+      <text class="fontSize32" style="font-weight:bold;">长租规则</text>
+    </view>
+    <view class="carMessageView-content">
+      <text class="blackTextColor fontSize28">有效期内减免全部停车费</text>
+    </view>
+  </view>
+  <view class="reminderView">
+    <view style="height:40rpx; display: flex; align-items: center;">
+      <text class="fontSize24" style="color:#bbbbbb; position: relative;">温馨提示:</text>
+    </view>
+    <view style="height:40rpx; display: flex; align-items: center;">
+      <text class="fontSize24" style="color:#bbbbbb; position: relative;">已过期3天，如需继续使用，请联系车场重新开通</text>
+    </view>
+  </view>
+  <view class="bottomView" bindtap="bottomViewClick">
+    <text class="whiteTextColor fontSize32">立即续费</text>
+  </view>
+</view>

@@ -1,0 +1,99 @@
+<!--pages/my/my.wxml-->
+<view class='view-page'>
+  <navbar page-name="个人中心"></navbar>
+</view>
+<!-- <view class="lineV" style="width:100vw; height:10rpx; background:#ff0; position: fixed;"></view> -->
+<view class='coat'>
+  <view class='header' data-vision="1.0.1" style="margin-top:{{navH}}px">
+    <view class='user-info'>
+      <image class='user-head' src='{{headPortrait}}'></image>
+      <button class='user-name'>{{nickName}}</button>
+      <button class="loginOut" bindtap="loginClick" hidden="{{loginHidden}}">登录</button>
+      <button class="loginOut" bindtap="loginOutClick" hidden="{{loginOutHidden}}">退出登录</button>
+    </view>
+  </view>
+  <!-- <view class="swiperView">
+  <image class='header-image' src='../../../images/carimage.png'></image>
+  </view> -->
+   
+  <view class='middle'>
+    <view class='list-two' bindtap='getMyCar'>
+      <view class='list-left'>
+        <image class='left-image' src='../../../images/wodecheliang.png'></image>
+        <view class='left-text'>
+          <text>我的车辆</text>
+        </view>
+      </view>
+      <view class='list-right'>
+        <image class='right-image' src='../../../images/jiantou.png'></image>
+      </view>
+    </view>
+    <view class='list-three' bindtap='getMyOrder'>
+      <view class='list-left'>
+        <image class='left-image' src='../../../images/jilu.png'></image>
+        <view class='left-text'>
+          <text>订单记录</text>
+        </view>
+      </view>
+      <view class='list-right'>
+        <image class='right-image' src='../../../images/jiantou.png'></image>
+      </view>
+    </view>
+    <view class="lineViewMargin"></view>
+    <view class='list-four' bindtap='toMC'>
+      <view class='list-left'>
+        <image class='left-image' src='../../../images/card-n.png'></image>
+        <view class='left-text'>
+          <text>月卡续费</text>
+        </view>
+      </view>
+      <view class='list-right'>
+        <image class='right-image' src='../../../images/jiantou.png'></image>
+      </view>
+    </view>
+    <view class="lineViewMargin"></view>
+    <view class='list-four' bindtap='myWalletClick'>
+      <view class='list-left'>
+        <image class='left-image' src='../../../images/fapiaoicon.png'></image>
+        <view class='left-text'>
+          <text>我的钱包</text>
+        </view>
+      </view>
+      <view class='list-right'>
+        <image class='right-image' src='../../../images/jiantou.png'></image>
+      </view>
+    </view>
+    <view class="lineViewMargin"></view>
+    <view class='list-four' bindtap='invoiceClick'>
+      <view class='list-left'>
+        <image class='left-image' src='../../../images/fapiaoicon.png'></image>
+        <view class='left-text'>
+          <text>发票</text>
+        </view>
+      </view>
+      <view class='list-right'>
+        <image class='right-image' src='../../../images/jiantou.png'></image>
+      </view>
+    </view>
+
+    
+  </view>
+  <view class="phoneView" style="bottom:{{butBottomM}}">
+    <text class="phoneView-text">客服电话：4000574288</text>
+  </view>
+  <!-- <cover-view class='footer' style="height:{{tabBarH}}">
+    <cover-view class="lineView"></cover-view>
+    <cover-view class='footer-left' bindtap='toHome'>
+      <cover-image class='footer-image' src='../../../images/homepage-n.png'></cover-image>
+      <cover-view class='footer-text drayTextColor'>首页</cover-view>
+    </cover-view>
+    <cover-view class='footer-middle' bindtap='toServices'>
+      <cover-image class='footer-image' src='../../../images/service-n.png'></cover-image>
+      <cover-view class='footer-text drayTextColor'>服务</cover-view>
+    </cover-view>
+    <cover-view class='footer-right' bindtap='toMy'>
+      <cover-image class='footer-image' src='../../../images/my-s.png'></cover-image>
+      <cover-view class='footer-text blueTextColor'>我的</cover-view>
+    </cover-view>
+  </cover-view> -->
+</view>

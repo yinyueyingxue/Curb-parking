@@ -1,0 +1,121 @@
+/* pages/module1/parkrecordDetails/parkrecordDetails.wxss */
+
+.page {
+  background:rgba(249,249,249,1);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  /* height: 100vh; */
+}
+
+.content {
+  background: white;
+  box-shadow:0px 2px 4px 0px rgba(0,0,0,0.12);
+  border-radius: 8rpx;
+  width: 94%;
+  height: 100%;
+  margin-top: 20rpx;
+  /* display: flex; */
+  justify-content: center;
+  /* align-items: center */
+}
+
+.contentView {
+  /* background: yellow; */
+  width: 90%;
+  margin-left: 32rpx;
+  display: flex;
+}
+
+.contentView-left {
+  /* background: chartreuse; */
+  width: 80%;
+  height: 100%
+}
+
+.parkingName {
+  margin-top: 42rpx;
+}
+
+.carNumber {
+  margin-top: 30rpx;
+  line-height: 24rpx;
+}
+
+.carTime {
+  margin-top: 10rpx;
+  line-height: 24rpx;
+}
+
+.lookTime {
+  margin-top: 10rpx;
+  line-height: 24rpx;
+}
+
+.contentView-right {
+  /* background: coral; */
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goPayView-View {
+  /* background: yellow; */
+  width: 100%;
+  height: 60rpx;
+  text-align: center;
+}
+
+.goPayView {
+  /* background: cyan; */
+  width: 90%;
+  height: 152rpx;
+  margin-left: 32rpx;
+  display: flex;
+}
+
+.goPayView-left {
+  /* background: chartreuse; */
+  width: 80%;
+  height: 100%;
+}
+
+.goPayView-leftTop {
+  /* background: yellow; */
+  width: 100%;
+  margin-top: 40rpx;
+  height: 50rpx;
+  display: flex;
+}
+
+.goPayView-image {
+  width: 14rpx;
+  height: 14rpx;
+  margin-top: 10rpx;
+}
+
+.goPayView-leftBot {
+  /* background: crimson; */
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.goPayView-right {
+  /* background: cornflowerblue; */
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentList {
+  /* background: chartreuse; */
+  width: 90%;
+  height: 244rpx;
+  margin-left: 32rpx;
+}

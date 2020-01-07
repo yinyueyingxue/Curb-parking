@@ -1,0 +1,32 @@
+<!--pages/module3/stopPayList/stopPayList.wxml-->
+<view class='view-page'>
+  <navbar page-name="临停缴费"></navbar>
+</view>
+
+<view class='coat' style="margin-top:{{navH}}px">
+  <scroll-view wx:if="{{payList.length!=0}}" class="scrollView">
+    <view class="parkingList">
+      <view class="item" wx:for="{{payList}}" wx:key="{{item}}">
+        <view class="left">
+          <view class="parkName" hidden="{{item.parkName==null ? true : false}}">{{item.parkName}}</view>
+          <view class="detail" hidden="{{item.plateNo==null ? true : false}}">车牌: {{item.plateNo}}</view>
+          <view class="detail" hidden="{{item.parkTime==null ? true : false}}">时长: {{item.parkTime}}</view>
+          <view class="detail">状态: {{item.carStatus == 3 ? "已出场" : "待出场"}}</view>
+        </view>
+        <view class="right">
+          <view class="money" hidden="{{item.amount==null ? true : false}}">
+            <text class='moneyleft'>￥</text>
+            {{item.unPayAmount}}
+          </view>
+          <button class="payBtn blueColor" bindtap="toPayOnClick" data-index="{{index}}" hidden="{{item.unPayAmount == 0 ? true : false}}">去缴费</button>   
+           <button class="payBtn blueColor" data-index="{{index}}" hidden="{{item.unPayAmount == 0 ? false : true}}">无需支付</button>  
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view wx:else class='nodataBox'>
+      <image src='../../../images/quesheng.png'></image>
+      暂无数据
+  </view>
+
+</view>

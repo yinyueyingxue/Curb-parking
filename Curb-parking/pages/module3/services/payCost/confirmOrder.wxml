@@ -1,0 +1,41 @@
+<!--pages/module3/services/payCost/confirmOrder.wxml-->
+<view class='view-page'>
+  <navbar page-name="确认订单"></navbar>
+</view>
+
+<view class="page" style="margin-top:{{navH}}px">
+  <view class="top">
+  <text class="money"><text class='moneyleft'>￥</text>{{unpayamount}}</text>
+  <text class="state">{{carStatus == 3 ? "已出场" : "待出场"}}</text>
+  </view>
+  <view class="detail">
+    <view class="item">
+      <text class="left">停车场</text>
+      <text class="right">{{pkname}}</text>
+    </view>
+    <view class="item">
+      <text class="left">车牌号</text>
+      <text class="right">{{plateNo}}</text>
+    </view>
+    <view class="item">
+      <text class="left">入场时间</text>
+      <text class="right">{{inTime}}</text>
+    </view>
+    <view class="item">
+      <text class="left">停车时长</text>
+      <text class="right">{{parkTime == null ? "0分钟" : parkTime}}</text>
+    </view>
+    <view class="item">
+      <text class="left">优惠金额</text>
+      <text class="right">￥{{unDiscountAmount}}</text>
+    </view>
+    <view class="item">
+      <text class="left">总金额</text>
+      <text class="right">￥{{unpayamount+unDiscountAmount}}</text>
+    </view>
+  </view>
+  <button class="bottomBtn blueColor" bindtap="bottomBtnClick" style="bottom:{{butBottomM}}">去支付</button>
+</view>
+
+
+

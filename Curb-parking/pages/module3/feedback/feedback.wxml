@@ -1,0 +1,32 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='view-page'>
+  <navbar page-name="我要吐槽"></navbar>
+  <view class='page-content'>
+    <!--这里放你的内容-->
+  </view>
+</view>
+<!-- <view class='coat'>
+  <textarea class='feedback' placeholder='请输入您的吐槽......' placeholder-class='font' maxlength='150'></textarea>
+  <view class='length'>
+    <text class='font-length'>0</text>
+    <text>/150</text>
+  </view>
+  <button class='submit'>提交吐槽</button>
+</view> -->
+<view class="wrap">
+  <view class="contant_wrap">
+    <view class="contant">
+      <text class='font-length'>{{length}}/{{maxLength}}</text>
+      <textarea name="bindTextAreaBlur" bindinput="bindTextAreaBlur" placeholder="请输入您的吐槽......" maxlength="150" placeholder-class='placeholder' value='{{advice}}'/>
+    </view>
+    <view class="contant-pic">
+      <view class="pics-list" wx:for="{{pics}}" wx:key="" >
+       <image  src="{{item}}" class="uploadImg"></image>
+       <image src="../../../images/cuowu.png" class="uploadImg-error" data-img="{{item}}" bindtap='deleteImg'></image>
+      </view>
+      <image src="../../../images/shangchuan.png" class="uploadImg {{isShow?'true':'hideTrue'}}" bindtap='uploadImage' ></image>
+    </view>
+  </view>
+  <button class="bottom" bindtap='submitAdvice'>提交吐槽</button>
+  <text class='call' bindtap='phoneCall'>客服电话:0571-87290358</text>
+</view>

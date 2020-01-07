@@ -1,0 +1,48 @@
+<view class='view-page'>
+  <navbar page-name="算停车"></navbar>
+  <view class='page-content'>
+    <!--这里放你的内容-->
+  </view>
+</view>
+<view class='pageBG'>
+  <view class="contain">
+
+    <view wx:if="{{dates.length!=0}}">
+      <view class="flex-item" wx:for="{{dates}}" wx:key='{{index}}'>
+        <view class="amout-item">
+          <view class="itemtext">
+            <view class="yuantext">￥</view>{{item.amout}}
+          </view>
+        </view>
+        <view class="order-item" bindtap="orderbtn" data-pkname='{{item.pkname}}' data-plate='{{item.plate}}' data-amout='{{item.amout}}' data-pkid='{{item.pkid}}' data-entrancetime='{{item.entrancetime}}' data-parktime='{{item.parktime}}' data-imgurl='{{item.imgurl}}' data-ssamout='{{item.ssamout}}' data-yhamout='{{item.yhamout}}' data-orderno='{{item.orderno}}' data-accountId='{{item.accountId}}'  wx:if='{{item.amout!="0.00"}}'>
+          <view class="itemtext"> 结束停车</view>
+        </view>
+        <view class="order-item"   wx:else style='background:gray'>
+          <view class="itemtext"> 结束停车</view>
+        </view>
+        <view class="pkname-item">
+          <view class="pknametext"> {{item.pkname}} </view>
+        </view>
+        <view class="plate-item">
+          <view class="itemtext">车牌：{{item.plate}}</view>
+        </view>
+        <view class="plate-item">
+          <view class="itemtext">时长：{{item.parktime}}</view>
+        </view>
+        <view class="plate-item">
+          <view class="itemtext">待出场</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='nodataBox'>
+      <image src='../../../images/quesheng.png'></image>
+      暂无数据
+    </view>
+
+
+
+    <view class="otherview" bindtap="otherplate">
+      <view class="other">其他车辆</view>
+    </view>
+  </view>
+</view>

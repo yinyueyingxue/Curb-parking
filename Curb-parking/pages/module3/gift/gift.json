@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "navigationBarTitleText": "西湖礼物",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black"
+}

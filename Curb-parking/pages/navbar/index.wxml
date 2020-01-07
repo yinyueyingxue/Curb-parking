@@ -1,0 +1,18 @@
+<!--pages/index/index.wxml-->
+
+<view class="navbar" style="height:{{navH}}px">
+  <view class="navbarLeft" style="margin-top:{{navT}}px;">
+    <view class="navBackView" bindtap="navBackViewClick">
+      <image style="width:18rpx; height:30rpx" src="../../images/back.png"></image>
+    </view>
+    <view style="width:2rpx; height:35rpx; background:#f5f5f5; margin-left:8rpx;"></view>
+    <view class="navHomeView" bindtap="navHomeViewClick">
+      <image style="width:30rpx; height:30rpx" src="../../images/home.png"></image>
+    </view>
+  </view>
+  <view class='navbar-title' style="margin-top:{{navT}}px;">
+    {{pageName}}
+  </view>
+</view>
+
+

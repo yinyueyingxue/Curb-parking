@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black"
+}

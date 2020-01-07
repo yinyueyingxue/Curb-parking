@@ -1,0 +1,68 @@
+<!--pages/module1/invoiceDetails/invoiceDetails.wxml-->
+<view class='view-page'>
+  <navbar page-name="开票详情"></navbar>
+</view>
+
+<view class="backView" style="margin-top:{{navH}}px">
+  <view class="topView-lineView"></view>
+  <view class="topView">
+    <view class="topView-left">
+      <view class="topView-left-top fontSize32 blackTextColor">电子发票</view>
+      <!-- <view class="topView-left-bottom drayTextColor fontSize28">2018-8-12</view> -->
+    </view>
+    <view class="topView-right">
+      <text class="fontSize32" style="color:{{titlecolor}}">{{statustitle}}</text>
+    </view>
+  </view>
+  <view class="titleView drayTextColor fontSize30">发票信息</view>
+  <view class="listView">
+    <view class="listView-view">
+      <text class="drayTextColor fontSize28">发票抬头</text>
+      <text class="listView-text fontSize28 blackTextColor">{{invoicetitle}}</text>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="listView-view">
+      <text class="drayTextColor fontSize28">税号</text>
+      <text class="listView-text fontSize28 blackTextColor">{{taxnum}}</text>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="listView-view">
+      <text class="drayTextColor fontSize28">发票内容</text>
+      <text class="listView-text fontSize28 blackTextColor">{{invoicecontent}}</text>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="listView-view">
+      <text class="drayTextColor fontSize28">发票金额</text>
+      <text class="listView-text fontSize28 blackTextColor">{{invoiceamount}}元</text>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="listView-view">
+      <text class="drayTextColor fontSize28">申请时间</text>
+      <text class="listView-text fontSize28 blackTextColor">{{invoicetime}}</text>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="listView-view">
+      <text class="drayTextColor fontSize28">微信卡包</text>
+      <text class="listView-text fontSize28 blackTextColor">已推送</text>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="listView-view">
+      <text class="drayTextColor fontSize28">接收邮箱</text>
+      <text class="listView-text fontSize28 blackTextColor">{{email}}</text>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+  </view>
+  <!-- <view class="remark">
+    <view class="remarkView">
+    <view class="remarkView-leftView fontSize24">备注:</view>
+    <view class="remarkView-rightView">
+      <text class="fontSize24" style="color:#D0142C">1、由于您申请的开票金额您申请的开票金额您申请的。 \n2、由于您申请的开票金额。</text>
+    </view>
+  </view>
+  </view>
+  <view class="bottomView">
+    <view class="bottomView-view blueColor">
+      <text class="fontSize34 whiteTextColor">重新申请开票</text>
+    </view>
+  </view> -->
+</view>

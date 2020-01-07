@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "navigationBarTitleText": "无需缴费",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black"  
+}

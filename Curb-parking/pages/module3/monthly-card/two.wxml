@@ -1,0 +1,63 @@
+<!--pages/monthly-card/two.wxml-->
+<view class='view-page'>
+  <navbar page-name="月卡续费"></navbar>
+  <view class='page-content'>
+    <!--这里放你的内容-->
+  </view>
+</view>
+
+<view class='coat'>
+
+  <view class='detailBox'>
+    <view class='detail'>
+
+      <view class='detail-left'>
+        <text class='text-one'>固定月卡</text>
+        <text class='text-two'>{{cardInfo.PKName}}</text>
+        <text class='text-three'>{{cardInfo.Amount}}元/月</text>
+      </view>
+      <view class='detail-right'>
+        <text class='text-four'>{{cardInfo.DaysRemaining}}天</text>
+        <text class='text-five'>剩余时间(天)</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+  <view class='recharge'>
+    <view class='btn-month'>
+      <view style='display: inline-block;' wx:if="{{cardInfo.MaxMonth > 0}}">
+        <button class='btn {{btnIndex == 1 ? "selected":""}}' bindtap='selectMonth' data-index="1">1个月</button>
+      </view>
+      <view style='display: inline-block;' wx:if="{{cardInfo.MaxMonth >= 3}}">
+        <button class='btn {{btnIndex == 3 ? "selected":""}}' bindtap='selectMonth' data-index="3">3个月</button>
+      </view>
+      <view style='display: inline-block;' wx:if="{{cardInfo.MaxMonth >= 6}}">
+        <button class='btn {{btnIndex == 6 ? "selected":""}}' bindtap='selectMonth' data-index="6">6个月</button>
+      </view>
+      <view style='display: inline-block;' wx:if="{{cardInfo.MaxMonth >= 9}}">
+        <button class='btn {{btnIndex == 9 ? "selected":""}}' bindtap='selectMonth' data-index="9">9个月</button>
+      </view>
+      <view style='display: inline-block;' wx:if="{{cardInfo.MaxMonth >= 12}}">
+        <button class='btn {{btnIndex == 12 ? "selected":""}}' bindtap='selectMonth' data-index="12">12个月</button>
+      </view>
+      <view style='display: inline-block;' wx:if="{{cardInfo.MaxMonth >= 18}}">
+        <button class='btn {{btnIndex == 18 ? "selected":""}}' bindtap='selectMonth' data-index="18">18个月</button>
+      </view>
+    </view>
+    <view class='input-month'>
+      <input class='input' type='number' placeholder='请输入所需包月数(数字)' placeholder-class="center" style='text-align:center;' value='{{month == 0 ? "1":month}}' bindblur='monthInput'></input>
+    </view>
+    <view class='footer'>
+      <view class='footer-left'>
+        <text class='text-footer-one'>共计:￥</text>
+        <text class='text-footer-two'>{{totalAmount}}</text>
+      </view>
+      <view class='footer-right'>
+        <button class='renew blueColor' bindtap='monthRenewals'>立即续费</button>
+      </view>
+    </view>
+  </view>
+</view>

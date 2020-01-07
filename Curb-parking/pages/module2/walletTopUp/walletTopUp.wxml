@@ -1,0 +1,48 @@
+<!--pages/module2/walletTopUp/walletTopUp.wxml-->
+<view class='view-page'>
+  <navbar page-name="钱包充值"></navbar>
+</view>
+<view class="listView" style="margin-top:{{navH + 12}}px"> 
+  <view class="listView-top">
+    <text class="blackTextColor fontSize32" style="font-weight:bold;">钱包余额</text>
+    <text class="blackTextColor fontSize32" style="font-weight:bold;">余额：{{balance}}元</text>
+  </view>
+  <view class="lineView"></view>
+  <view class="listView-top" bindtap="topUpViewClick">
+    <text class="blackTextColor fontSize28">充值</text>
+    <image src="../../../images/jiantou.png" style="width:30rpx; height:30rpx;"></image>
+  </view>
+  <view class="lineViewMarginLeft"></view>
+  <view class="listView-top" bindtap="payViewClick">
+    <text class="blackTextColor fontSize28">无感支付</text>
+    <view style="width:104rpx; height:40rpx; border-radius:8rpx;">
+      <image style="width:100%; height:100%;" src="../../../images/pay-s.png"></image>
+    </view>
+  </view>
+</view>
+<view class="listView"> 
+  <view class="listView-top">
+    <text class="blackTextColor fontSize32" style="font-weight:bold;">德充网账户</text>
+    <text class="blackTextColor fontSize32" style="font-weight:bold;">余额：500元</text>
+  </view>
+  <view class="lineView"></view>
+  <view class="listView-top" bindtap="impowerViewClick">
+    <text class="blackTextColor fontSize28">授权绑定</text>
+    <view style="width:104rpx; height:40rpx; border-radius:8rpx;">
+      <image style="width:100%; height:100%;" src="../../../images/pay-s.png"></image>
+    </view>
+  </view>
+  <view class="lineViewMarginLeft"></view>
+  <view class="listView-top" bindtap="payViewClick">
+    <text class="blackTextColor fontSize28">无感支付</text>
+    <view style="width:104rpx; height:40rpx; border-radius:8rpx;">
+      <image style="width:100%; height:100%;" src="../../../images/pay-s.png"></image>
+    </view>
+  </view>
+</view>
+<view class="listView"> 
+  <view class="listView-top" bindtap="changePassword">
+      <text class="blackTextColor fontSize28">修改支付密码</text>
+      <image src="../../../images/jiantou.png" style="width:30rpx; height:30rpx;"></image>
+  </view>
+</view>

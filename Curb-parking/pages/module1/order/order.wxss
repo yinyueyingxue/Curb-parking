@@ -1,0 +1,296 @@
+.page{
+  min-height: 90vh;
+    width: 100%; 
+    letter-spacing: 2rpx; 
+    font-family: PingFang-SC-Medium; 
+    position: relative;
+    background-color: #f5f5f5;
+} 
+.header_change
+{ 
+    width: 100%;
+    background:#fff;  
+    text-align: center;
+    overflow: hidden;
+    /* padding: 40rpx 0; */
+}
+.image{ 
+  width: 45rpx;
+  height: 45rpx;  
+  margin-top:20rpx; 
+}
+
+.fontcen{
+     background:#fff;  
+     display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.btbox {
+  position: fixed;
+  width:100vw;
+}    
+.weui_btn {   
+  
+
+width:90vw;
+
+height:100rpx;
+border-radius:50px;
+ 
+font-size:30rpx;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(255,255,255,1);
+line-height:100rpx;
+/* margin-top: 70rpx; */
+}    
+    
+.headtc{
+    font-size: 36rpx;
+    height: 70rpx;
+    line-height: 100rpx;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    margin-top:30rpx; 
+}
+
+.info1{  
+    margin-left: 20rpx;
+    /* font-weight: 500; */
+}
+.info2{ 
+  font-size:34rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:#D0142C;
+  line-height:48rpx;
+
+}
+
+.top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 155px;
+  background:rgba(255,255,255,1);
+  width: 100vw;
+  border-bottom: 1rpx solid rgba(230,230,230,1);
+  border-top: 1rpx solid rgba(230,230,230,1);
+}
+
+.money{
+  height:48px;
+  font-size:40px;
+  font-family:HelveticaNeue;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:49px;
+}
+.state{
+  height:17px;
+  font-size:12px;
+  font-family:PingFang-SC;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:17px;
+  margin-top: 15px;
+}
+
+.moneyleft{
+  height:16px;
+  font-size:16px;
+  font-family:HelveticaNeue;
+  color:rgba(51,51,51,1);
+  line-height:16px;
+}
+
+.amount{  
+    font-family:HelveticaNeue-Bold;
+    font-weight:bold;  
+    font-size:30rpx;
+    color:#333333; 
+    margin-top: 50rpx;
+    margin-bottom: 20rpx;
+} 
+.payamount{ 
+    color:#c8161d;
+} 
+.image1{ 
+  width: 110rpx;
+  height: 74rpx; 
+  margin-top: 40rpx;
+}
+.fontcen{ 
+    position: relative;
+}
+.weui_cell_bd{
+    display: inline-block; 
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 30rpx; 
+    color: #999999;
+
+}
+.weui_cell_ft{
+  display: inline-block;
+  right: 0;
+  color: #333333;
+  position: absolute;
+  margin-right: 30rpx;  
+  margin-top: 20rpx;
+  font-size: 30rpx; 
+}
+.fontbotom{
+    background:#fff;
+    /* margin-top:20rpx; */
+} 
+.weui_cells_title{
+    margin-left: 30rpx;
+    color: #888;
+}  
+.pay_type{
+  background:#fff;
+  margin-top:20rpx;
+}
+.boxshow
+{
+    display: block;
+}
+.boxhide{
+    display: none;
+}
+
+.bigimg{
+    position: absolute; 
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(000,000,000,0.4); 
+    top:0;
+}
+.image2{
+    z-index: 99;
+    margin-top: 300rpx;  
+    width: 92%;  
+    margin-left: 30rpx;
+    border-radius:5rpx;
+}
+.br{
+  /* margin-top: 79rpx; */
+  height: 20rpx; 
+  background: #f5f5f5;
+}
+
+
+/** 蒙版弹窗相关 */
+.maskView {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  background: rgba(0,0,0,.3);
+  overflow: hidden;
+  /* padding-top: 0rpx; */
+}
+
+.bottomView {
+  background: white;
+  width: 100vw;
+  color: white;
+  position: fixed;
+  bottom: 0rpx;
+  z-index: 5001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomListView {
+  /* background: greenyellow; */
+  margin-top: 20rpx;
+  width: 92vw;
+}
+
+.bottomListView-top {
+  /* background: cyan; */
+  width: 100%;
+  height: 100rpx;
+  /* margin: 0rpx 24rpx; */
+  display: flex;
+  align-items: center;
+}
+
+.bottomListView-list {
+  /* background: cadetblue; */
+  width: 100%;
+  height: 104rpx;
+  display: flex;
+  align-items: center;
+}
+
+
+/* 输入支付密码 */
+.btn_pay{
+  margin: 100rpx auto; width: 600rpx; height: 100rpx; line-height: 100rpx; border-radius: 100rpx;
+  background-color: #d3a95a; color: #fff; font-size: 36rpx; text-align: center; 
+}
+/* 支付密码css start */
+.bg_layer{
+  position: fixed; left: 0; top: 0; bottom: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.6); z-index: 9998;
+}
+.input_main{
+    position: fixed; left: 0; bottom: 420rpx; width: 100%; height: 394rpx;
+    background-color: #fff; z-index: 9999;
+}
+.input_title{
+    width: 100%; height: 90rpx; line-height: 90rpx; text-align: center; 
+    font-size: 32rpx; border-bottom: 1rpx solid #e2e2e2;
+}
+.input_back{
+    position: absolute; left: 0; top: 0;
+    width: 80rpx; height: 90rpx; display: flex; justify-content: center; align-items: center;
+}
+.input_back text{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: white;
+  border: 1rpx solid #aaa;
+  border-width: 5rpx 0 0 5rpx;
+  transform: rotate(-45deg);
+}
+
+.input_tip{  margin: 60rpx; font-size: 24rpx; color: #888; }
+
+/* 密码掩码模拟 */
+.input_row{
+  width: 690rpx; margin: 0 auto; height: 98rpx; position: relative;
+  display: flex; align-items: center; border: 1rpx solid #e2e2e2;
+}
+.input_row .pwd_item{
+  flex: 1; display: flex; align-items: center; justify-content: center; 
+  height: 100%; border-right: 1rpx solid #e2e2e2; position: relative;
+}
+.pwd_item:nth-last-of-type(1) { border-right: 0; } 
+.pwd_item text { 
+  width: 30rpx; height: 30rpx; border-radius: 30rpx; background-color: #555;
+}
+
+
+.forget_pwd{ 
+  float: right; margin: 20rpx 30rpx; width: 120rpx; text-align: right; font-size: 24rpx; color: #407EC2;
+}
+
+/* 文本输入框位置: 设置到左边隐藏 */
+.input_control { 
+  position: relative; left: -300rpx; bottom: 0; width: 100rpx; height: 100rpx;
+}

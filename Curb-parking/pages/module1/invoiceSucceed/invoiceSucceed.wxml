@@ -1,0 +1,19 @@
+<!--pages/module1/invoiceSucceed/invoiceSucceed.wxml-->
+<view class='view-page'>
+  <navbar page-name="停车开票"></navbar>
+</view>
+
+<view class="backView" style="margin-top:{{navH}}px">
+  <view class="imageView">
+    <image class="iconImage" src="../../../images/invoicesucceed.png"></image>
+  </view>
+  <view class="succeedView">
+    <text class="blackTextColor fontSize36">提交成功</text>
+  </view>
+  <view class="hintView">
+    <text class="drayTextColor fontSize24">您的发票预计在24小时内开出，请注意查收</text>
+  </view>
+  <view class="completeView">
+    <button class="completeView-btn blueTextColor" bindtap="completeBtnClick">完成</button>
+  </view> 
+</view>

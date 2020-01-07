@@ -1,0 +1,80 @@
+/* pages/module2/promptlyRenew/promptlyRenew.wxss */
+.titleView {
+  width: 93vw;
+  height: 60rpx;
+  margin: 42rpx 0rpx 24rpx 24rpx;
+  /* background: chartreuse; */
+}
+
+.listView {
+  /* background: red; */
+  width: 96vw;
+  /* height: 280rpx; */
+  margin: -20rpx 0rpx 14rpx 14rpx;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.butView {
+  margin: 12rpx 12rpx;
+  width: 217rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-around; */
+  
+}
+
+.starTimeView {
+  /* background: #f0f; */
+  width: 94vw;
+  margin: 60rpx 23rpx 0rpx 23rpx;
+  height: 40rpx;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.endTimeView {
+  /* background: #ff0; */
+  width: 94vw;
+  margin: 10rpx 23rpx 0rpx 23rpx;
+  height: 40rpx;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.contentView {
+  width: 94vw;
+  margin: 170rpx 23rpx 0rpx 23rpx;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reminderView {
+  /* background: yellow; */
+  width: 94vw;
+  margin: 14rpx 23rpx;
+  height: 76rpx;
+  position: fixed;
+  bottom: 220rpx;
+}
+
+.bottomView {
+  background: #407EC2;
+  width: 94vw;
+  margin: 14rpx 23rpx;
+  height: 104rpx;
+  border-radius: 16rpx;
+  line-height: 104rpx;
+  /* margin-top: 150rpx; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 80rpx;
+}

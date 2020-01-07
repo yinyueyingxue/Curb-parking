@@ -1,0 +1,21 @@
+<!--pages/module2/home-page/nearby.wxml-->
+<view class='view-page'>
+  <navbar page-name="附近停车场"></navbar>
+</view>
+<view class='coat'>
+  <view class='main' style="margin-top:{{navH}}px">
+    <scroll-view scroll-y style="height: 1056rpx;" class='scroll'>
+      <view class='details' wx:for='{{parkList}}' wx:for-item='i' wx:key='{{i.id}}'>
+        <view class='bottom-left' bindtap='toDetails' data-PKName='{{i.PKName}}' data-Distance='{{i.Distance}}' data-Address='{{i.Address}}' data-SpaceBitNum='{{i.SpaceBitNum}}' data-CarBitNum='{{i.CarBitNum}}' data-pointLat='{{i.Lat}}' data-pointLng='{{i.Lng}}'
+          data-pointName='{{i.PKName}}' data-pointAddress='{{i.Address}}' data-feeremark='{{i.FeeRemark}}'>
+          <view class='text-left one'>{{i.PKName}}</view>
+          <view class='text-left two'>{{i.Distance}}km | {{i.Address}}</view>
+          <view class='text-left three'>余位:{{i.SpaceBitNum}}/总车位:{{i.CarBitNum}}</view>
+        </view>
+        <view class='bottom-right'>
+          <image class='text-right' src='../../../images/daohang.png' bindtap='navigation' data-lat='{{i.Lat}}' data-lng='{{i.Lng}}' data-name='{{i.PKName}}' data-address='{{i.Address}}'></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

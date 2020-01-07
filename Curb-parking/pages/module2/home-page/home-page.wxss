@@ -1,0 +1,244 @@
+/* pages/home-page/home-page.wxss */
+page {
+  height: 92vh;
+  width: 100vw;
+  background: white;
+}
+#map{
+  height: 92vh;
+  width: 100%;
+  margin-top: 120rpx;
+  /* background: cornflowerblue; */
+}
+.img-map{
+  width: 54rpx;
+	height: 54rpx;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); 
+}
+.notice-one{
+  width:100%;
+  height:110rpx;
+  background:rgba(0,0,0,0.72);
+  box-shadow:0px 2rpx 4rpx 0px rgba(0,0,0,0.13);
+  z-index: 99;
+  font-size:26rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+  position: absolute;
+}
+.notice-one-text{
+  width: 100%;
+  white-space: pre-line;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+}
+.ad{
+  width: 750rpx;
+  height: 177rpx;
+  margin: 128rpx auto;
+}
+.notice-two{
+  width:90%;
+  height:60rpx;
+  background:rgba(255,240,187,0.72);
+  box-shadow:0px 2rpx 4rpx 0px rgba(0,0,0,0.14);
+  border-radius:35rpx;
+  border:1rpx solid rgba(180,101,0,0.31);
+  /* position: absolute; */
+  margin: 138rpx auto;
+  margin-bottom: 0rpx;
+  z-index: 99; 
+}
+.notice-two-text{
+  margin: 15rpx 0 0 29rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(180,101,0,1);
+}
+.search{
+  width: 700rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 25rpx;
+}
+.spare{
+  position: absolute;
+  left: 25rpx;
+  width: 250rpx;
+  height: 68rpx;
+}
+.location{
+  width: 84rpx;
+  height: 84rpx;
+  position: fixed;
+  left: 30rpx;
+  bottom: 40rpx;
+}
+.number{
+  height:88rpx;
+  box-shadow:0px 2rpx 4rpx 0px #407EC2;
+  border-radius:55rpx;
+  position: fixed;
+  right: 30rpx;
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  letter-spacing: 2rpx; 
+  bottom: 40rpx;
+}
+.number-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.number-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.number-image{
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  margin-right: 5px;
+}
+.num-title, .num-num{
+  display: inline-flex;
+}
+.num-title{
+  font-size:26rpx;
+  font-family:PingFang-SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+}
+.num-num{
+  font-size:38rpx;
+  font-family:HelveticaNeue;
+  color:rgba(255,255,255,1);
+
+  margin: 0 0 0 10rpx;
+}
+.num-set{
+  font-size: 32rpx;
+  color: rgba(22, 33, 130, 1)
+}
+.footer{
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  background: #ffffff;
+  margin: 0 auto;
+}
+.footer-left, .footer-middle, .footer-right{
+  display: inline-block;
+  margin:10rpx 0 0 147rpx;
+  text-align: center;
+}
+
+.footer-image{
+  width: 54rpx;
+  height: 54rpx;
+}
+.footer-text{
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  line-height:28rpx;
+}
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,.2);
+  
+  overflow: hidden;
+}
+.drawer_attr_box {
+  width: 96%;
+  position: fixed;
+  height: 328rpx;
+  bottom: 20px;
+  left: 2%;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 0rpx;
+  box-shadow:0px 2px 4px 0px rgba(0,0,0,0.13);
+  border-radius:4px;
+}
+.drawer_content {
+  width:750rpx;
+  height:328rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 8rpx 0px rgba(2,93,150,0.3);
+  border-radius:12rpx 12rpx 0px 0px;
+}
+.drawer_top{
+  width:96%;
+  height:219rpx;
+  
+}
+.drawer_bottom{
+  border-top: 1rpx solid rgba(210,210,210,1);
+  width:96%;
+  height:110rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-left{
+  float: left;
+  margin: 25rpx 0 0 30rpx;
+}
+.bottom-right{
+  float: right;
+  margin: 61rpx 30rpx 0 0;
+}
+.text-left{
+  margin-top: 15rpx;
+}
+.text-right{
+  width: 124rpx;
+  height: 124rpx;
+}
+.one{
+  font-size:36rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  line-height:50rpx;
+}
+.two{
+  font-size:26rpx;
+  width: 500rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+  line-height:37rpx;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.three{
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:#407EC2;
+  line-height:33rpx;
+}
+.detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  line-height:42rpx;
+  margin-top: 32rpx;
+  height: 42rpx;
+  width: 300rpx;
+}

@@ -1,0 +1,89 @@
+<!--pages/module1/parkingTicket/parkingTicket.wxml-->
+<view class='view-page'>
+  <navbar page-name="停车开票"></navbar>
+</view>
+<view class="backView" style="margin-top:{{navH}}px">
+  <view class="topView">
+    <text class="topView-text drayTextColor fontSize28">发票详情</text>
+  </view>
+  <view class="listView">
+    <view class="typeView">
+      <text class="lineView-text drayTextColor fontSize28">抬头类型</text>
+      <view class="lineView-view">
+        <view class="lineView-view-viewQY" bindtap="qYViewClick">
+          <image class="lineView-view-view-image" src="{{typeSelected==true ? '../../../images/selectedS.png' :'../../../images/unselected.png'}}"></image>
+          <text class="lineView-view-view-text blackTextColor fontSize26">企业单位</text>
+        </view>
+        <view class="lineView-view-viewGR" bindtap="dWViewClick">
+          <image class="lineView-view-view-image" src="{{typeSelected==false ? '../../../images/selectedS.png' :'../../../images/unselected.png'}}"></image>
+          <text class="lineView-view-view-text blackTextColor fontSize26">个人/非企业单位</text>
+        </view>
+      </view>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="nameView">
+      <text class="lineView-text drayTextColor fontSize28">抬头名称</text>
+      <input class="listView-input fontSize28" placeholder-style="color:#BBBBBB;" placeholder='请输入抬头名称' bindinput="bindNameInput">
+      </input>
+    </view>
+    <view class="lineViewMarginLeft" hidden="{{typeSelected==true ? 0 : 1}}"></view>
+    <view class="shuiHView" hidden="{{typeSelected==true ? 0 : 1}}">
+      <text class="lineView-text drayTextColor fontSize28" hidden="{{typeSelected==true ? 0 : 1}}">税号</text>
+      <input class="listView-input fontSize28" placeholder-style="color:#BBBBBB;" placeholder="请填写纳税人识别号" hidden="{{typeSelected==true ? 0 : 1}}" bindinput="bindShuiHInput" confirm-type='search'></input>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="mailboxView">
+      <text class="lineView-text drayTextColor fontSize28">接收邮箱</text>
+      <input class="listView-input fontSize28" placeholder-style="color:#BBBBBB;" placeholder="请填写您用于接收发票的邮箱" bindinput="bindMailboxInput"></input>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="contentView" bindtap="contentViewClick">
+      <text class="drayTextColor fontSize28">更多内容</text>
+      <text class="contentView-text fontSize28" style="color:#BBBBBB">填写备注、地址等（非必填）</text>
+      <image class="contentView-image" src="../../../images/jiantou.png"></image>
+    </view>
+    <view class="lineViewMarginLeft"></view>
+    <view class="moneyView">
+      <text class="drayTextColor fontSize28">开票总金额</text>
+      <text class="moneyView-text blackTextColor fontSize32">{{totalMoney}}元</text>
+    </view>
+  </view>
+  <view class="wxCarView">
+    <text class="wxCarView-text0 drayTextColor fontSize28">微信卡包</text>
+    <text class="wxCarView-text1 blackTextColor fontSize32">去授权</text>
+  </view>
+  <button class="inputBtn" bindtap="inputBtnClick">提交</button>
+</view>
+
+
+
+<view class="maskView" hidden="{{markViewHidden}}" bindtap="maskViewClick">
+  <view class="bottomView"> 
+    <view class="bottomListView">
+      <view class="bottomListView-view">
+        <text class="bottomListView-viewText0 drayTextColor fontSize28">发票类型</text>
+        <text class="bottomListView-viewText1 drayTextColor fontSize28">电子发票</text>
+      </view>
+      <view class="bottomListView-view">
+        <text class="bottomListView-viewText0 drayTextColor fontSize28">发票抬头</text>
+        <text class="bottomListView-viewText1 drayTextColor fontSize28">{{nameStr}}</text>
+      </view>
+      <view class="bottomListView-view" hidden="{{typeSelected==true ? 0 : 1}}">
+        <text class="bottomListView-viewText0 drayTextColor fontSize28" hidden="{{typeSelected==true ? 0 : 1}}">税号</text>
+        <text class="bottomListView-viewText1 drayTextColor fontSize28" hidden="{{typeSelected==true ? 0 : 1}}">{{shuiHStr}}</text>
+      </view>
+      <view class="bottomListView-view">
+        <text class="bottomListView-viewText0 drayTextColor fontSize28">电子邮箱</text>
+        <text class="bottomListView-viewText1 drayTextColor fontSize28">{{mailboxStr}}</text>
+      </view>
+      <view class="bottomListView-view">
+        <text class="bottomListView-viewText0 drayTextColor fontSize28">微信推送</text>
+        <text class="bottomListView-viewText1 drayTextColor fontSize28">是</text>
+      </view>
+      <view class="bottomListView-view">
+        <text class="drayTextColor fontSize20">请确认邮箱无误，电子发票将在系统开具后发送至您的邮箱，请注意查收</text>
+      </view>
+      <button class="bottomInputBtn" bindtap="bottomBtnClick">确认提交</button>
+    </view>
+  </view>
+</view>

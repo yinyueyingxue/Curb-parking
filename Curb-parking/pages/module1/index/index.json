@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "场内缴费",
+  "usingComponents": {
+    "navbar": "/pages/navbar/index"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,65 @@
+<!--pages/home-page/details.wxml-->
+<view class='view-page'>
+  <navbar page-name="停车场详情"></navbar>
+</view>
+<view class='coat'>
+  <view class='main' style="margin-top:{{navH}}px">
+    <view class='details' wx:for-item='i' wx:key='{{i.id}}'>
+      <view class='bottom-left'>
+        <view class='text-left one'>{{pkName}}</view>
+        <view class='text-left two'>{{distance}}km | {{address==null ? "0" : address}}</view>
+        <view class='text-left three'>余位:{{carBitNum-carBitNumLeft==null ? "" : carBitNum-carBitNumLeft}}/总车位:{{carBitNum==null ? "" : carBitNum}}</view>
+      </view>
+      <view class='bottom-right'>
+        <image class='text-right' src='../../../images/daohang.png' bindtap='navigation'></image>
+      </view>
+    </view>
+    <view class='tab'>
+      <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">停车须知</view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">收费标准</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">杭州残疾人政策</view>
+      </view>
+      <swiper current="{{currentTab}}" class="swiper-box" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+        <swiper-item>
+          <scroll-view scroll-y class='roll'>
+            <view class='notice'>
+            <text class='notice-title'>{{pkName}}停车须知:</text>
+            <text class='notice-text'>一、凡在本停车场进出或存放之机动车辆，其驾驶人员均须遵守本规定，服从车辆管理人员
+的管理和指挥，按指定位置停放车辆，自觉维护场内秩序。</text>
+            <text class='notice-text'>二、入场之机动车和驾驶员必须遵守执行政府有关市容卫生管理之规定，保持车场内清洁卫
+生，凡脏污、泥泞之机动车辆，本停车场有权禁止其入内及停放。</text>
+            <text class='notice-text'>三、入场停放之任何机动车辆，应安通行证及泊车卡指定区域停放，不得异区、异位停放。
+否则，本停车场有权将不按指定位置停放的车辆拖至适当地方，并由其车主承担一切费用。</text>
+            <text class='notice-text'>四、停放在停车场的车辆必须锁好窗门，凡现金、重要文件、贵重物品及车内物品，本停车
+场不负保管责任。</text>
+            <text class='notice-text'>五、易燃、易爆、剧毒等危险品严禁带入车场，否则将被处以罚款，并承担可能引起的一切
+责任。</text>
+            <text class='notice-text'>六、本停车场仅向被泊车辆提供车位的使用权，本停车场无需承担被泊车辆任何损伤、损毁
+及遗失之责任。</text>
+            <text class='notice-text'>七、若有损毁本停车场内的建筑物、设备设施的，损毁人需照价赔偿。</text>
+          </view>
+          </scroll-view>
+        </swiper-item>
+        <swiper-item>
+          <scroll-view scroll-y class='roll'>
+            <view class='rule'>
+              <text class='rule-title'>{{pkName}}收费标准:</text>
+              <text class='rule-text'>{{feeremark}}</text>
+            </view>
+          </scroll-view>
+        </swiper-item>
+        <swiper-item>
+          <scroll-view scroll-y class='roll'>
+            <view class='discount'>
+              <text class='discount-title'>杭州市残疾人驾驶机动车停放优惠政策公示:</text>
+              <text class='discount-text'>杭州市区残疾人持本人三证（残疾证、机动车驾驶证及车辆行驶证）驾驶机动车停放政府定价管理的停车场时，实行停车费减免政策：</text>
+              <text class='discount-text'>停车1天（含24小时）以内免费；扣减一天（24小时）后按标准收费。残疾人本人在车辆停放收费时应主动出示本人的三证。</text>
+  <text class='discount-text'>此政策仅限杭州市区残疾人适用。</text>
+            </view>
+          </scroll-view>  
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,57 @@
+<!--pages/monthly-card/one.wxml-->
+<view class='view-page'>
+  <navbar page-name="月卡续费"></navbar>
+</view>
+
+<view class='help' style="margin-top:{{navH}}px">
+
+  <view wx:if="{{carList.length!=0}}">
+    <view wx:for="{{carList}}" wx:for-item="i" wx:key="{{i.id}}">
+      <view class='help_item'>
+        <view class='title' data-index='{{i.PlateID}}' bindtap='GetMonthCard'>
+          <view class='title_1'>
+            <text>{{i.PlateNo}}</text>
+          </view>
+          <view class='title_2'>
+            <image src="../../../images/{{showIndex == i.PlateID ? 'up':'down'}}.png"></image>
+          </view>
+        </view>
+        <view class='detail' wx:if="{{showIndex == i.PlateID}}">
+          <view wx:for="{{monthCardList}}" wx:for-item="j" wx:key="{{j.id}}">
+            <view wx:if="{{j.id % 2 == 0}}">
+              <view class='detail-bottom' bindtap='toTwo' data-index='{{j.GID}}'>
+                <view class='detail-left'>
+                  <text class='text-one'>固定月卡</text>
+                  <text class='text-two'>{{j.PKName}}</text>
+                  <text class='text-three'>{{j.Amount}}元/月</text>
+                </view>
+                <view class='detail-right'>
+                  <text class='text-four'>{{j.DaysRemaining}}天</text>
+                  <text class='text-five'>剩余时间(天)</text>
+                </view>
+              </view>
+            </view>
+            <view wx:else>
+              <view class='detail-top' bindtap='toTwo' data-index='{{j.GID}}'>
+                <view class='detail-left'>
+                  <text class='text-one'>固定月卡</text>
+                  <text class='text-two'>{{j.PKName}}</text>
+                  <text class='text-three'>{{j.Amount}}元/月</text>
+                </view>
+                <view class='detail-right'>
+                  <text class='text-four'>{{j.DaysRemaining}}天</text>
+                  <text class='text-five'>剩余时间(天)</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class='nodataBox'>
+    <image src='../../../images/quesheng.png'></image>
+    暂无数据
+  </view>
+
+</view>

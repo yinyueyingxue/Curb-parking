@@ -1,0 +1,66 @@
+<!--pages/module1/invoiceHelp/invoiceHelp.wxml-->
+<view class='view-page'>
+  <navbar page-name="开票帮助"></navbar>
+</view>
+<view class="lineView" style="position:fixed;"></view>
+
+<view class="page" style="margin-top:{{navH}}px">
+  <view class="helpView">
+    <view class="helpOneView">
+      <view class="helpOneLeftView">
+       <text class="helpView-text">1.</text>
+      </view>
+      <view class="helpOneRightView">
+        <text class="helpView-contentText">您可按照订单申请开票，可开票金额为您订单的实际消费金额。</text>
+      </view>
+    </view>
+    <view class="helpTwoView">
+      <view class="helpTwoLeftView">
+       <text class="helpView-text">2.</text>
+      </view>
+      <view class="helpTwoRightView">
+        <text class="helpView-contentText">SPS停车服务中各种形式的折扣券不支持开票。单次开票金额限制为1000元。如果您需要开具更多发票，可选择申请多次开票。</text>
+      </view>
+    </view>
+    <view class="helpTwoView">
+      <view class="helpTwoLeftView">
+       <text class="helpView-text">3.</text>
+      </view>
+      <view class="helpTwoRightView">
+        <text class="helpView-contentText">您申请开具电子发票后，请您留意您的邮箱，SPS最快可在10分钟内将电子发票发送至您的\n邮箱。</text>
+      </view>
+    </view>
+    <view class="helpOneView">
+      <view class="helpOneLeftView">
+       <text class="helpView-text">4.</text>
+      </view>
+      <view class="helpOneRightView">
+        <text class="helpView-contentText">SPS支持并默认的开票内容为“停车费”，其他内容不支持开票。</text>
+      </view>
+    </view>
+    <view class="helpOneView">
+      <view class="helpOneLeftView">
+       <text class="helpView-text">5.</text>
+      </view>
+      <view class="helpOneRightView">
+        <text class="helpView-contentText">SPS支持开票的订单为您已完成消费且尚未开票的订单。</text>
+      </view>
+    </view>
+    <view class="helpSixView">
+      <view class="helpSixLeftView">
+       <text class="helpView-text">6.</text>
+      </view>
+      <view class="helpSixRightView">
+        <text class="helpView-contentText">如您开具的增值税普通发票用于企业报销，根据国家税务相关政策要求请填写纳税人识别号；如您的单位是非企业性质或您要求开具个人名义抬头，您可以选择“个人/非企业单位”的开票选项，则无需填写纳税人识别号。</text>
+      </view>
+    </view>
+    <view class="helpOneView">
+      <view class="helpOneLeftView">
+      </view>
+      <view class="helpOneRightView">
+        <text class="helpView-contentText">如有疑问，可拨打SPS客服电话4000574288，我们将竭诚为您服务。</text>
+      </view>
+    </view>
+
+  </view>
+</view>

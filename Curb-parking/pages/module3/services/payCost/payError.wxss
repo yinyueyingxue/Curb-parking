@@ -1,0 +1,31 @@
+/* pages/module3/services/payCost/payError.wxss */
+.page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:rgba(249,249,249,1);
+  width: 100vw;
+  height: 90vh;
+}
+.bottomBtn{
+  height:50px;
+  border-radius:25px;
+  border:1px solid  #407EC2;
+  color:  #407EC2;
+  width: 60%;
+}
+.tips{
+  height:21px;
+  font-size:15px;
+  font-family:PingFang-SC;
+  font-weight:400;
+  color:rgba(187,187,187,1);
+  line-height:21px;
+  margin-bottom: 90px;
+}
+.image{
+  width: 70px;
+  height: 120px;
+  margin-top: 90px;
+  margin-bottom: 25px;
+}

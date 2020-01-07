@@ -1,0 +1,40 @@
+<!--pages/invoice/invoice.wxml-->
+<view class='view-page'>
+  <navbar page-name="发票"></navbar>
+</view>
+
+<view class="page" style="margin-top:{{navH}}px">
+  <view class="lineView"></view>
+  <view class='listView' bindtap='invoiceCarClick'>
+    <view class='listView-left'>
+      <view class='left-text'>
+        <text>停车开票</text>
+      </view>
+    </view>
+    <view class='listView-right'>
+      <image class='right-image' src='../../../images/jiantou.png'></image>
+    </view>
+  </view>
+  <view class="lineView"></view>
+  <view class='listView' bindtap='invoiceHistoryClick'>
+    <view class='listView-left'>
+      <view class='left-text'>
+        <text>开票历史</text>
+      </view>
+    </view>
+    <view class='listView-right'>
+      <image class='right-image' src='../../../images/jiantou.png'></image>
+    </view>
+  </view>
+  <view class="lineView"></view>
+  <view class='listView' bindtap='invoiceHelpClick'>
+    <view class='listView-left'>
+      <view class='left-text'>
+        <text>开票帮助</text>
+      </view>
+    </view>
+    <view class='listView-right'>
+      <image class='right-image' src='../../../images/jiantou.png'></image>
+    </view>
+  </view>
+</view>

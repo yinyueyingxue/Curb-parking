@@ -1,0 +1,432 @@
+/* pages/module1/invoiceList/invoiceList.wxss */
+page {
+  /* background: cyan; */
+  background-color: rgba(249,249,249,1);
+  position: absolute;
+  font-size: 36rpx;
+  width: 100vw;
+  height: 90vh;
+  display: block;
+}
+
+.scroll-view {
+  /* background: red; */
+  background-color: rgba(249,249,249,1);
+  width: 100vw;
+  /* height: 90%; */
+  padding-bottom: 120rpx;
+}
+
+.topView {
+  width: 90vw;
+  height: 90rpx;
+  margin-left: 34rpx;
+  display: flex;
+}
+
+.topLeftView {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topRightView {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.topRightView-image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.cententView {
+  display: flex;
+  background: white;
+  width: 90%;
+  border-radius: 10rpx;
+  box-shadow:0px 2px 4px 0px rgba(0,0,0,0.13);
+  margin-left: 34rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.cententView-view {
+  width: 100%;
+}
+
+.listView {
+  width: 100%;
+  height: 220rpx;
+}
+
+.list-listView {
+  width: 100%;
+  height: 99%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-leftView {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-leftView-image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.list-cententView {
+  width: 60%;
+  height: 90%;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+
+.list-centent-topView {
+  width: 100%;
+  height: 33.33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list-centent-cententView {
+  width: 100%;
+  height: 33.33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.list-centent-bottomView {
+  width: 100%;
+  height: 33.33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list-contentView-image {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 7rpx;
+}
+
+.list-rightView {
+  /* background: coral; */
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomView-topView {
+  background: white;
+  width: 100vw;
+  height: 64rpx;
+  position: fixed;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.bottomView {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  /* height: 120rpx; */
+  width: 100vw;
+  position: fixed;
+  bottom: 0rpx;
+  border-top: 2rpx solid #F5F5F5;
+}
+
+.bottomView-left {
+  width: 32%;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomView-centent {
+  width: 32%;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomView-right {
+  width: 36%;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomView-centent-image {
+  margin-right: 20rpx;
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.bottomView-right-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #407EC2;
+  width: 70%;
+  height: 70rpx;
+  border-radius: 35rpx;
+  color: white;
+}
+
+/** 蒙版弹窗相关 */
+.maskView {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.maskView-image {
+  width: 100%;
+  height: 100%;
+}
+
+.contentView-left {
+  width: 22%;
+  height: 90vh;
+}
+
+.contentView-right {
+  background: white;
+  width: 78%;
+  height: 90vh;
+}
+
+.titleView {
+  width: 92%;
+  height: 60rpx;
+  margin-top: 60rpx;
+  margin-left: 20rpx;
+}
+
+.dataView {
+  width: 92%;
+  height: 90rpx;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.dataView-view {
+  background:rgba(249,249,249,1);
+  width: 45%;
+  height: 68rpx;
+  border:2rpx solid rgba(230,230,230,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8rpx;
+}
+
+.dataView-line {
+  background:rgba(216,216,216,1);
+  margin: 0rpx 30rpx;
+  width: 15%;
+  height: 2rpx;
+}
+
+.moneyView {
+  width: 92%;
+  height: 90rpx;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.moneyView-input {
+  width: 45%;
+  height: 68rpx;
+  border:2rpx solid rgba(230,230,230,1);
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.cityView {
+  display: flex;
+  width: 95%;
+  max-height: 550rpx;
+  margin-left: 14rpx;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.cityView-view {
+  width: 140rpx;
+  height: 70rpx;
+  margin: 20rpx 20rpx;
+  border:2rpx solid rgba(230,230,230,1);
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.cityView-btn {
+  width: 140rpx;
+  height: 70rpx;
+  text-align: center;
+  font-size: 28rpx;
+  margin: 20rpx 20rpx;
+} */
+
+.markView-bottom {
+  background: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+  display: flex;
+  justify-content: center;
+  border-top: 2rpx solid #F5F5F5;
+}
+
+.markView-bottom-left {
+  width: 30%;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin-left: -60rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:rgba(204,204,204,1);
+  box-shadow:0px 2px 4px 0px rgba(0,0,0,0.14)
+}
+
+.markView-bottom-right {
+  width: 30%;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin-left: 20rpx;
+  margin-right: 100rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:rgba(64,126,194,1);
+  box-shadow:0px 2px 4px 0px rgba(64,126,194,1);
+}
+
+
+/** 日期选择器 */
+.maskDataView {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dataView-data {
+  background: white;
+  width: 100vw;
+  height: 500rpx;
+  position: fixed;
+  bottom: 0rpx;
+  z-index: 3003;
+}
+
+.dataView-dataTop {
+  width: 92%;
+  height: 80rpx;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataView-cancelView {
+  width: 15%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dataView-titleView {
+  width: 70%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dataView-confirmView {
+  width: 15%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dataView-pickerView {
+  width: 100%;
+  height: 400rpx;
+}
+
+.yearsView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monthsView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daysView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dataView-pickerView-picker {
+  width: 100%;
+  height: 100%;
+}

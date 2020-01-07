@@ -1,0 +1,9 @@
+
+<view class='view-page'>
+  <navbar page-name="算停车"></navbar>
+  <view class='page-content'>
+    <!--这里放你的内容-->
+  </view>
+</view>
+
+<web-view src="https://cmain.park.cmbchina.biz/ytc/login/?type=5"></web-view>

@@ -1,0 +1,61 @@
+<!--pages/module1/parkrecordDetails/parkrecordDetails.wxml-->
+<view class='view-page'>
+  <navbar page-name="订单详情"></navbar>
+</view>
+<view class="page" style="margin-top:{{navH}}px">
+  <view class="content">
+    <view class="contentView" hidden="{{listHidden}}" style='{{carStatus==3?"height: 270rpx;" : "height: 220rpx;"}}'>
+      <view class="contentView-left">
+        <view class="parkingName">
+          <text class="fontSize34 blackTextColor">{{parkName}}</text>
+        </view>
+        <view class="carNumber">
+          <text class="fontSize24 drayTextColor">车牌: {{plateNo}}</text>
+        </view>
+        <view class="carTime">
+          <text class="fontSize24 drayTextColor">进场时间: {{inTime}}</text>
+        </view>
+        <view class="lookTime" hidden="{{carStatus==3 ? false : true}}">
+          <text class="fontSize24 drayTextColor" hidden="{{carStatus==3 ? false : true}}">出场时间: {{outTime}}</text>
+        </view> 
+      </view>
+      <view class="contentView-right">
+        <text class="fontSize32" style='{{carStatus==3?"color:rgba(136,136,136,1);" : "color:rgba(64,126,194,1);"}}'>{{carStatus==3? "已出场" : "待出场"}}</text>
+      </view>
+    </view>
+    <view class="lineView"></view>
+    <view class="goPayView" hidden="{{goPayHidden}}" wx:for="{{goPayList}}" wx:key="{{item}}" data-amount="{{item.amount}}" data-recordid="{{item.recordid}}" data-orderno="{{item.orderno}}" data-plateno="{{item.plateno}}">
+      <view class="goPayView-left" hidden="{{goPayHidden}}">
+        <view class="goPayView-leftTop" hidden="{{goPayHidden}}">
+          <image class="goPayView-image" src="../../../images/timeicons.png" hidden="{{goPayHidden}}"></image>
+          <text class="fontSize28 blackTextColor" style="margin-left:20rpx;" hidden="{{goPayHidden}}">待支付金额：{{item.amount}}元</text>
+        </view>
+        <view class="goPayView-leftBot" hidden="{{goPayHidden}}">
+          <text class="fontSize24 drayTextColor" style="margin-left: 30rpx;" hidden="{{goPayHidden}}">停车时长: {{item.parktime}}{{item.parkTime}}</text>
+        </view>
+      </view>
+      <view class="goPayView-right">
+        <view class="goPayView-View" data-amount="{{item.amount}}" data-recordid="{{item.recordId}}" data-orderno="{{item.orderNo}}" data-plateno="{{item.plateNo}}" bindtap="goPayViewClick">
+          <text class="fontSize28 blueTextColor">去支付</text>
+        </view>
+      </view>
+    </view>
+    <view class="lineView"></view>
+    <view class="contentList" hidden="{{payListHidden}}" wx:for="{{resultList}}" wx:key="{{item}}">
+      <view class="goPayView-leftTop">
+        <image class="goPayView-image" src="../../../images/timeicon.png"></image>
+        <text class="fontSize28 drayTextColor" style="margin-left:20rpx;">{{item.payTime}}</text>
+      </view>
+      <view class="goPayView-leftBot" style="margin-top: 24rpx;">
+          <text class="fontSize24 blackTextColor" style="margin-left: 30rpx;">订单编号：{{item.payRecId}}</text>
+      </view>
+      <view class="goPayView-leftBot" style="margin-top: 12rpx;">
+        <text class="fontSize28 blackTextColor" style="margin-left: 30rpx;">已支付金额：{{item.payAmount}}元</text>
+      </view>
+      <view class="goPayView-leftBot" style="margin-top: 12rpx;">
+        <text class="fontSize24 drayTextColor" style="margin-left: 30rpx;">停车时长: {{item.parkTime}}</text>
+      </view>
+      <view class="lineView" style="margin-top: 30rpx;"></view>
+    </view>
+  </view>
+</view>

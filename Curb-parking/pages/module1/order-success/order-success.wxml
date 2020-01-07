@@ -1,0 +1,33 @@
+<!--pages/order-success/order-success.wxml-->
+<view class='view-page'>
+  <navbar page-name="算停车"></navbar>
+  <view class='page-content'>
+    <!--这里放你的内容-->
+  </view>
+</view>
+<view class='pageBG'>
+  <view class='container'>
+  <view class='tip-href'>
+    <view  bindtap="invoice" class='href'> <image src='../../../images/fapian.png'></image> 开发票</view>
+  </view>
+  <view class='top'>
+    <image class='success-icon'src="../../../images/success-icon.png"></image>
+    <text class='tip-top'>支付成功</text>
+    <view class='tip-bottom'>
+      <text class='.tip-bottom-left'>￥</text><text class='.tip-bottom-right'>{{payamount}}</text>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='bottom-left'>
+      <text class='text-left'>停车地点  </text>
+      <text class='text-left'>车牌号</text>
+      <text class='text-left'>停车时长</text>
+    </view>
+    <view class='bottom-right'>
+      <text class='text-right'>{{place}}</text>
+      <text class='text-right'>{{plate}}</text>
+      <text class='text-right'>{{parkingtime}}</text>
+    </view>
+  </view>
+</view>
+</view>

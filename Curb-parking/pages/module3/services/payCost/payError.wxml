@@ -1,0 +1,11 @@
+<!--pages/module3/services/payCost/payError.wxml-->
+<view class='view-page'>
+  <navbar page-name="支付"></navbar>
+</view>
+
+<view class="page" style="margin-top:{{navH}}px">
+  <image class="image" src="../../../../images/wuxuzhifu.png"></image>
+  
+  <text class="tips">提示: 该车辆未产生支付金额,请修改车牌</text>
+  <button class="bottomBtn" bindtap="backInputCar">返回修改车牌</button>
+</view>
